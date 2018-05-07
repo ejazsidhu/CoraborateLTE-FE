@@ -456,10 +456,15 @@ a {
 
 @media (max-width:767px) {
 	.main-sidebar {
-		-webkit-transform: translate(-230px, 0);
+		/* -webkit-transform: translate(-230px, 0);
 		-ms-transform: translate(-230px, 0);
 		-o-transform: translate(-230px, 0);
-		transform: translate(-230px, 0);
+		transform: translate(-230px, 0); */
+
+		-webkit-transform: translate(-350px, 0);
+		-ms-transform: translate(-350px, 0);
+		-o-transform: translate(-350px, 0);
+		transform: translate(-350px, 0);
 	}
 }
 
