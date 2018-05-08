@@ -1,56 +1,61 @@
-.heading {
-    /* width: 202px;
-    height: 16px; */
-    /* mix-blend-mode: undefined; */
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.3;
-    letter-spacing: normal;
-    text-align: left;
-    color: #f76149;
-    margin-bottom:10px; 
-  }
+.flex-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+}
 
-  .heading > a > span{
-      margin-right:50px;
-      
-  }
-  .heading>a>i{
-      color:#a2a2a2;
-      text-decoration: none;
-  }
-  .heading>a{
-    color: #f76149;
-  }
-  .classHeading{
-    width: 30px;
-    /* height: 34px; */
-    border-radius: 50%;
-    margin-left: -5px;
-    margin-top: -7px;
-  }
+.info-section{
+  background: pink;
+ 
+  width: 100%;
+  padding: 35px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+}
+.body-section{
+  background: paleturquoise;
+  /* padding: 35px; */
+  height: 100%;
+  text-align: center;
+}
 
-  .subHeading{
-    width: 134px;
-    height: 18px;
-    mix-blend-mode: undefined;
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.44;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000000;
-  }
+.info{
+  padding: 15px;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  border: 1px solid olive;
+  /* text-align: center; */
+  justify-content: start;
+  display: flex;
+}
 
-  .subMenu{
-    top: -2px;
-    padding: 0px;
-    /* display: block; */
-    left: -160px;
-  }
+.settings{
+  padding: 15px;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  border: 1px solid mediumvioletred;
+   text-align: end;
+}
+.info-image{
+  border-radius: 50%;
+}
+.main-heading{
+  /* width: 165px;
+  height: 22px;
+  mix-blend-mode: undefined; */
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  /* font-style: normal;
+  font-stretch: normal; */
+  line-height: 1.18;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
