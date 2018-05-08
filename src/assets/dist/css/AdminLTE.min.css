@@ -1009,8 +1009,10 @@ a {
 		}
 
 		.dropdown-menu > li > a:hover {
-			background-color: #f7f7f7;
+			/* background-color: #f7f7f7; */
 			color: #333;
+			/* custom box-shadow */
+			box-shadow: 0px 4px 6px 0px #E3E3E3;
 		}
 
 	.dropdown-menu > .divider {
