@@ -51,5 +51,19 @@
   <!-- AdminLTE for demo purposes -->
   <script src="assets/dist/js/demo.js"></script>
 
+
+  <script>
+  
+  $(document).ready(function()
+   {
+       
+     $('a.test').click( function(e){
+       console.log('this is hover')
+       $(this).next('ul').toggle(); e.stopPropagation(); e.preventDefault(); });
+    
+    });
+   
+  </script>
+
 </body>
 </html>
