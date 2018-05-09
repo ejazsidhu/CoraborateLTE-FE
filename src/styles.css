@@ -1,5 +1,142 @@
-<<<<<<< HEAD
-=======
 /* You can add global styles to this file, and also import other style files */
+button.close {
+    -webkit-appearance: none;
+    padding: 0px 7px  !important;;
+    cursor: pointer;
+    background: red  !important;;
+    border: 0;
+}
 
->>>>>>> c6a3b53... gallery page add
+.close {
+    float: right;
+    font-size: 34px  !important;;
+    font-weight: normal  !important;;
+    line-height: 1 !important;
+    color: #ffffff  !important;
+    /* text-shadow: 0 1px 0 #fff; */
+    filter: alpha(opacity=20);
+    opacity: 1 !important;
+}
+
+.modal-header {
+    padding: 15px;
+    border:none !important;
+}
+
+button.close:focus{
+    outline: none !important;
+}
+
+/* login style input classes */
+
+.form-group-material {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  input.input-material {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid lightgray;
+    padding: 10px 0;
+    color: #868e96;
+    font-weight: 300;
+    background-color: transparent;
+  }
+  
+  input.input-material.is-valid {
+    border-color: #28a745 !important;
+  }
+  
+  input.input-material.is-invalid {
+    border-color: #dc3545 !important;
+  }
+  
+  input.input-material:focus {
+    /* border-color: #33b35a; */
+    border-color: black;
+    outline: none;
+  }
+  .label-material{
+    color: #aaa;
+    position: absolute !important;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+
+  }
+  
+  input.input-material~label {
+    color: #aaa;
+    position: absolute !important;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+  }
+  
+  input.input-material~label.active {
+    font-size: 0.8rem;
+    top: -10px;
+    color: black;
+  }
+  
+  input.input-material.is-invalid~label {
+    color: #dc3545;
+  }
+  /* for slect option login style classes */
+  
+.form-group-material {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  select.input-material {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid lightgray;
+    padding: 10px 0;
+    color: #868e96;
+    font-weight: 300;
+    background-color: transparent;
+  }
+  
+  select.input-material.is-valid {
+    border-color: #28a745 !important;
+  }
+  
+  select.input-material.is-invalid {
+    border-color: #dc3545 !important;
+  }
+  
+  select.input-material:focus {
+    /* border-color: #33b35a; */
+    border-color: black;
+    outline: none;
+  }
+  
+  select.input-material~label {
+    color: #aaa;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+  }
+  
+  select.input-material~label.active {
+    font-size: 0.8rem;
+    top: -10px;
+    color: black;
+  }
+  
+  select.input-material.is-invalid~label {
+    color: #dc3545;
+  }

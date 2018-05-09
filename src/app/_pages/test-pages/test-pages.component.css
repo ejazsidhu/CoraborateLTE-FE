@@ -1,0 +1,72 @@
+/* leave school poup code */
+.main-body {
+    /* padding: 15px 10px; */
+    text-align: center;
+    /* max-width: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    /* background-color: pink; */
+}
+
+#leave-school-popup{
+    margin-bottom: -45px !important;
+}
+.heading{
+    flex: 1;
+    text-align: center;
+    /* margin:10px 0; */
+}
+.bottom-link{
+    text-align: center;
+    margin:20px 0;
+}
+
+.image-holder {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.message {
+    text-align: center
+}
+
+btns {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.btn-cancle {
+    align-items: flex-start;
+    border-radius: 0;
+    color: white;
+    flex: 1;
+    width: 49%
+}
+
+.btn:focus {
+    outline: none !important;
+}
+
+.btn-done {
+   
+    border-radius: 0;
+    background-color: #f76149;
+    color: white;
+    flex: 1;
+    width: 49%
+}
+/* leave school poup code  end*/
+input.input-material~label {
+    color: #aaa;
+    position: absolute !important;
+    top: 14px !important;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+  }
