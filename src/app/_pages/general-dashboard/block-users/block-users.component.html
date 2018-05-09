@@ -1,0 +1,282 @@
+<section class="content">
+    <!-- Default box -->
+    <div class="box" style="box-shadow: 0 0px 0px white!important;margin-top: 20px!important;">
+        <div class="box-body">
+            <p style="float:left; font-weight:bold;padding: 30px 19px;">BLOCK USERS LIST</p>
+            <div class="input-group" style="padding: 26px 1px;width: 20%;float: right;">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+            <div id="peoplePart">
+                <table class="table peopleList">
+                    <tr style="background-color: #f5f3f3;">
+                        <th>
+                            &nbsp; &nbsp; &nbsp; NAME
+                        </th>
+                        <th>
+                            ROLE
+                        </th>
+                        <th>
+                            DATE JOINED
+                        </th>
+                        <th>
+                          ACTION
+                        </th>
+                    </tr>   
+                    <!-- @foreach (var u in Model)
+                    { -->
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="Firstname"> F.N </div>
+                                <span class="nameLinkInPeople" style="margin-left: 12px;">FullName</span>
+                            </td>
+                            <td>
+                                <!-- @{
+                                    string Role = u.Role.Select(r => r.Name).FirstOrDefault() == null ? "Not set" : u.Role.Select(r => r.Name).FirstOrDefault();
+                                } -->
+                                Role
+                            </td>
+                            <td>
+                                CreatedOn
+                            </td>
+                            <td>
+                                <div class="action" style="display: inline-block;cursor: pointer;">
+                                    <img src="assets/Images/actionDot.png" style="width:18px" />
+                                    <div class="actionList">
+                                        <div class="actionListInner">
+                                            <a>
+                                                View
+                                            </a><br />
+                                            <a>
+                                                Unblock
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                     
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

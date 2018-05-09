@@ -10,6 +10,11 @@ import { AppsettingsComponent } from './components/appsettings/appsettings.compo
 import { GeneralDashboardComponent } from './_pages/general-dashboard/general-dashboard.component';
 import { NavbarComponent } from './_pages/general-pages/navbar/navbar.component';
 import { DashboardBodyComponent } from './_pages/general-dashboard/dashboard-body/dashboard-body.component';
+import { PasswordComponent } from './_pages/general-dashboard/password/password.component';
+import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-classes/organize-classes.component';
+import { BlockUsersComponent } from './_pages/general-dashboard/block-users/block-users.component';
+import { RecordsComponent } from './_pages/general-dashboard/records/records.component';
+
 
 
 
@@ -23,7 +28,11 @@ import { DashboardBodyComponent } from './_pages/general-dashboard/dashboard-bod
     AppsettingsComponent,
     GeneralDashboardComponent,
     NavbarComponent,
-   DashboardBodyComponent
+   DashboardBodyComponent,
+   PasswordComponent,
+   OrganizeClassesComponent,
+   BlockUsersComponent,
+   RecordsComponent
   
 
   ],

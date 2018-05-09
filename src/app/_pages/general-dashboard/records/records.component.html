@@ -1,0 +1,144 @@
+<section class="content">
+  <!-- Default box -->
+  <div class="box" style="box-shadow: 0 0px 0px white!important;margin-top: 20px!important;">
+    <div class="box-body" style="padding:0!important;">
+      <div>
+        <div id="classOwnRight">
+          <div class="box-header">
+          </div>
+          <p style="text-align:center;  ">
+            <img src="assets/Images/Download.png" class="img-responsive" style="display:inline !important;" />
+          </p>
+          <p style="text-align:center; font-weight:bold;height:81px;">Export an Excel of all the Classes you’ve created or participants in a class.</p>
+          <div class="col-sm-offset-3 col-md-6">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <label>Choose Class</label>
+                  <div>
+                    <select class="form-control">
+                      <option value="volvo">1</option>
+                      <option value="saab">2</option>
+                      <option value="mercedes">3</option>
+                      <option value="audi">4</option>
+                    </select>
+                    <!-- @Html.DropDownList("Class", Utils.GetAllClasses(Model.Id, null), "All Classes", new { @class = "form-control" }) -->
+                  </div>
+                  <!-- /.input group -->
+
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <!-- Date -->
+                  <div class="form-group">
+                    <label>Start Date:</label>
+                    <div class="input-group date">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control pull-right datepicker">
+                    </div>
+                    <!-- /.input group -->
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <!-- Date -->
+                  <label>End Date:</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right datepicker">
+                    <!-- /.input group -->
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-md-12">
+              <div class="primary">
+                <div class="col-md-12" style="text-align: center;">
+                  <input type="submit" name="Export" value="Export" class="export" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height:250px;">
+        <div id="classOwnRight">
+          <div class="box-header">
+          </div>
+          <div class="col-sm-offset-3 col-md-6">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <label>Particiapant</label>
+                  <div>
+                    <select class="form-control">
+                      <option value="volvo">1</option>
+                      <option value="saab">2</option>
+                      <option value="mercedes">3</option>
+                      <option value="audi">4</option>
+                    </select>
+                    <!-- @Html.DropDownList("Class", Utils.GetAllClasses(Model.Id, null), "All Classes", new { @class = "form-control" }) -->
+                  </div>
+                  <!-- /.input group -->
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <!-- Date -->
+                  <label>Start Date:</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right datepicker">
+                  </div>
+                  <!-- /.input group -->
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box-primary">
+                  <!-- Date -->
+                  <label>End Date:</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right datepicker">
+                    <!-- /.input group -->
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="col-md-12">
+            <div class="box-primary">
+              <div class="form-group">
+                <div class="col-md-12" style="text-align: center;">
+                  <input type="submit" name="Export" value="Export" class="export" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -75,7 +75,7 @@ body {
 	-moz-transition: -moz-transform .3s ease-in-out, margin .3s ease-in-out;
 	-o-transition: -o-transform .3s ease-in-out, margin .3s ease-in-out;
 	transition: transform .3s ease-in-out, margin .3s ease-in-out;
-	margin-left: 230px;
+	margin-left: 300px;
 	z-index: 820;
 }
 
@@ -154,10 +154,10 @@ body {
 
 .content {
 	min-height: 250px;
-	padding: 14px;
+	padding: 19px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 116px;
+	padding-left: 63px;
 	padding-right: 15px;
 }
 

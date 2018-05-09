@@ -1,0 +1,367 @@
+<section class="content">
+    <div class="box" style="box-shadow: 0 0px 0px white!important;margin-top: 20px!important;">
+        <div class="box-body" style="padding:0!important;">
+            <div class="col-md-12" style="text-align: center;">       
+          <h3>Active & Archived classes</h3>
+          <img src="assets/Images/CurrentClasses.png" class="img-responsive" style="display: initial!important;" />
+          </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box-primary">
+
+                        <table id="matrix" style="width:98%;">
+                            <thead>
+                                <tr style="background-color:#e4e4e4">
+                                    <th style="padding: 18px;">
+                                        Active Classes
+                                    </th>
+                                    <th style="float:right;padding: 18px;">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <!-- <tbody *ngIf="ClassesOwnedobj">
+                                <tr *ngFor="let item of ClassesOwnedobj[0]" style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item" *ngIf="item.Active" style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="../Content/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            {{item.Name}}
+                                        </span>
+                                    </td>
+                                    <td class="item" *ngIf="item.Active" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="../Content/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a (click)="Archiveclass(item.Id)">
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+
+                            <tbody>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td class="item"  style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            Name
+                                        </span>
+                                    </td>
+                                    <td class="item" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Archive class
+                                                    </a><br />
+                                                    <a>
+                                                        View
+                                                    </a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+
+
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="box-primary">
+                        <table style="width:98%;">
+                            <thead>
+                                <tr style="background-color:#e4e4e4">
+                                    <th style="padding: 18px;">
+                                        Archived Classes
+                                    </th>
+                                    <th style="float:right;padding: 18px;">
+                                        Actions
+                                    </th>
+                                </tr>
+                            <!-- </thead>
+                            <tbody *ngIf="ClassesOwnedobj">
+                                <tr *ngFor="let item of ClassesOwnedobj[0]" style="border-top: 1px solid #b1b1b1;">
+                                    <td *ngIf="!item.Active" style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="../Content/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                            {{item.Name}}
+                                        </span>
+                                    </td>
+                                    <td *ngIf="!item.Active" style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="../Content/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a (click)="Restoreclass(item.Id)">
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+
+                            <tbody>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                        Name
+                                        </span>
+                                    </td>
+                                    <td style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                        Name
+                                        </span>
+                                    </td>
+                                    <td style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                        Name
+                                        </span>
+                                    </td>
+                                    <td style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                        Name
+                                        </span>
+                                    </td>
+                                    <td style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="border-top: 1px solid #b1b1b1;">
+                                    <td style="padding:5px;width:50%;">
+                                        <div class="ProfileClassCircle" style="margin-top: 5px !important;">
+                                            <span><img src="assets/Images/ClassIcons/geometry.svg" style="width: 41px;border-radius: 50%;" /></span>
+                                        </div>
+                                        <span class="ProfileCNameLink">
+                                        Name
+                                        </span>
+                                    </td>
+                                    <td style="float:right;margin-top: 32px;margin-right: 44px;">
+                                        <div class="action" style="display: inline-block;cursor: pointer;">
+                                            <img src="assets/Images/actionDot.png" style="width:18px" />
+                                            <div class="actionList">
+                                                <div class="actionListInner" style="margin: 5px auto 0px 10px !important;">
+                                                    <a >
+                                                        Restore
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
