@@ -1,51 +1,164 @@
-<main>
-  
-    <input id="t" type="radio" name="tabs" checked>
-    <label for="t"> <i class="fa fa-envelope"></i> <br> MESSAGES</label>
-      
-    <input id="tt" type="radio" name="tabs">
-    <label for="tt"> <i class="fa fa-bar-chart  "></i> <br> STATISTICS</label>
-      
-    <input id="tab3" type="radio" name="tabs">
-    <label for="tab3"><i class="fa fa-pencil  "></i> <br>TOTAL STUDENTS</label>
-      
-    <input id="tab4" type="radio" name="tabs">
-    <label for="tab4"><i class="glyphicon glyphicon-apple"></i> <br>TOTAL STUDENTS</label>
-      
-    <section id="content1">
-      <p>
-        Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-      </p>
-      <p>
-        Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-      </p>
+
+    <section class="content-header">
+        <!-- <div style="width:300px;margin-left: 57px;"> -->
+        <div style="width:300px;">
+            <a id="editClass" class="modal-link">
+                <div class="MainClassProfile">
+                    <div id="MainClassCircle">
+                        <span>
+                            <img src="assets/Images/math.svg" style="width: 41px;border-radius: 50%;" />
+                        </span>
+                    </div>&nbsp;&nbsp;
+                    <!-- <div *ngIf="ClassHistory" class="MainCNameLink"> -->
+                    <!-- <b> {{_MessageService.ClassHistory.Name}} name</b><br />
+                                {{_MessageService.ClassHistory.Code}} code -->
+                    <div class="MainCNameLink">
+                        <b>name</b>
+                        <br /> code
+                    </div>
+                </div>
+            </a>
+        </div>
+        <ol class="breadcrumb">
+            <li>
+                <div class="feature">
+                    <a data-toggle="modal" data-target="#AddPeopleModal" id="addPeople">AddPeople</a>
+                    <!--@Html.ActionLink("Add People", "AddPeople", null, new { id = Model.Id }, new { @id = "addPeople", @class = "modal-link" })-->
+                </div>
+            </li>
+            <li>
+                <div class="featureEdit">
+                    <a id="editClass" class="modal-link">
+                        <img src="assets/Images/settings.png" style="width: 22px;">
+                    </a>
+                </div>
+            </li>
+        </ol>
     </section>
-      
-    <section id="content2">
-      <p>
-        Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-      </p>
-      <p>
-        Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-      </p>
+    
+    <section class="content">
+        <div class="box" style="box-shadow: 0 0px 0px white!important;margin-top: 20px!important;">
+            <div class="box-header with-border">
+                {{empCode}}
+                <!--<div class="Messag">-->
+                <!--<a [routerLink]="['/Message', item.Id]">-->
+                <!-- <a routerLinkActive="active" [routerLink]="['./Message',1]">Message</a> -->
+                <a>Message</a>
+                <!--</div>
+                
+                            <div class="PeopleInMsgSection">-->
+                <!-- <a routerLinkActive="active" [routerLink]="['./People']">people</a> -->
+                <a>Peoples</a>
+                <!--<a (click)="PeopleDivFun()">
+                                    People
+                                </a>-->
+                <!--</div>-->
+    
+                <div class="box-tools pull-right">
+    
+                </div>
+            </div>
+            <div>
+                <div class="box-body" style="padding:0!important;">
+                    <div style="width:232px;padding: 21px 0px;">
+                        <div class="input-group">
+                            <!--<input type="text" name="q" class="form-control" placeholder="Search...">-->
+                            <!--   <input [(ngModel)]="searchText" class="form-control" placeholder="Search...">-->
+                            <input class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+    
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+    
+                        <div class="MsgEdit">
+                            <a id="editForMsg" class="modal-link">
+                                <img src="assets/Images/edit-document.png" />
+                            </a>
+                        </div>
+    
+                    </div>
+                    <br />
+                    <div class="box box-solid" style="overflow-y:scroll; height: 59vh; width:333px !important; box-shadow: 0 1px 1px rgba(0,0,0,0)!important; position:absolute !important">
+                        <div class="box-header with-border">
+                            <h4 class="box-title" style="font-weight:bold;font-size: 14px;">ANNOUNCEMENT</h4>
+                        </div>
+                        <div class="box-body no-padding">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a>
+                                        <span>
+                                            <img src="assets/Images/math.svg" style="width: 26px;border-radius: 50%;" />
+                                        </span>
+                                        <p style="margin-top: -30px; margin-left: 37px; color:black;">
+                                            Everyone
+                                            <span style="float:right; color:#828181; font-size: 12px;">Sat</span>
+                                            <br />
+                                            <span style="color:#828181; font-size: 12px;">Send you first annouoncement</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr />
+                            <div class="box-header with-border">
+                                <h4 class="box-title" style="font-weight:bold; font-size: 14px;">CONVERSATIONS</h4>
+                            </div>
+                            <!-- <ul *ngIf="_MessageService.ClassHistory" class="nav nav-pills nav-stacked">
+                                <li *ngFor="let User of _MessageService.ClassHistory.JoinUsers ">
+                                    <a (click)='MessageBox(User.Id)'>
+                                        <div class="Fname">{{User.FirstName}} </div>
+                                        <p style="margin-top: -30px; margin-left: 37px; color:black;">
+                                            {{User.FirstName}} {{User.LastName}}
+                                            <span style="float:right;color:#828181;font-size: 12px;">10h</span>
+                                            <br />
+                                            <span style="color:#828181;font-size: 12px;">What are you doing.</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul> -->
+                            <ul class="nav nav-pills nav-stacked">
+                                    <li>
+                                        <a>
+                                            <div class="Fname">Fir </div>
+                                            <p style="margin-top: -30px; margin-left: 37px; color:black;">
+                                                full Name
+                                                <span style="float:right;color:#828181;font-size: 12px;">10h</span>
+                                                <br />
+                                                <span style="color:#828181;font-size: 12px;">What are you doing.</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+    
+                        </div>
+    
+                    </div>
+                    <div class="box-body" style="margin-left: 346px!important;margin-top:-80px;">
+                        <p style="font-weight: bold;">
+                            {{_MessageService.ClassHistory.firbaseIdentity}}
+                            <br />
+                            <span style="font-weight: normal;">infoText</span>
+                        </p>
+                        <hr />
+                        <div id="messagesDiv">
+                            <span id="loadingImg">
+                                <img src="assets/Images/loading.gif" alt="Smiley face">
+                            </span>
+                        </div>
+                        <hr />
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" id='messageInput' placeholder='messagePlacHolder' style="height: 53px!important;">
+                            <span class="input-group-btn">
+    
+                                <button type="button" id="btnSend" class="btn  btn-flat">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-      
-    <section id="content3">
-      <p>
-        Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-      </p>
-      <p>
-        Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-      </p>
-    </section>
-      
-    <section id="content4">
-      <p>
-        Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-      </p>
-      <p>
-        Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-      </p>
-    </section>
-      
-  </main>
+
+<!-- </div> -->

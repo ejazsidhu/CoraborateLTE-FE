@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Admillte242</title>
@@ -23,12 +24,14 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini" >
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
 
-  <app-root>
-      <div class="wrapper"></div>
-  </app-root>
-
+    <app-root>
+        <div class="content-wrapper"></div>
+    </app-root>
+  
+  </div>
 
   <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
@@ -53,17 +56,18 @@
 
 
   <script>
-  
-  $(document).ready(function()
-   {
-       
-     $('a.test').click( function(e){
-      //  console.log('this is hover')
-       $(this).next('ul').toggle(); e.stopPropagation(); e.preventDefault(); });
-    
+
+    $(document).ready(function () {
+
+      $('a.test').click(function (e) {
+        //  console.log('this is hover')
+        $(this).next('ul').toggle(); e.stopPropagation(); e.preventDefault();
+      });
+
     });
-   
+
   </script>
 
 </body>
+
 </html>
