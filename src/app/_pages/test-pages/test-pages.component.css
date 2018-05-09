@@ -30,6 +30,17 @@
     margin-bottom: 30px;
 }
 
+.image-mini{
+    max-width:160px !important;
+    height: 85px !important;
+}
+.image-heading{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    /* margin-right: 10px */
+}
+
 .message {
     text-align: center
 }
@@ -59,6 +70,25 @@ btns {
     flex: 1;
     width: 49%
 }
+
+.btn-done-mini {
+   
+    border-radius: 0;
+    background-color: #f76149;
+    color: white;
+    padding: 4px;
+}
+table{
+    margin-bottom: 30px !important
+}
+.table>tbody>tr>td{
+    width: 48%;
+    vertical-align: middle;
+}
+td.title{
+    text-align: start;
+    padding-left:15%;
+}
 /* leave school poup code  end*/
 input.input-material~label {
     color: #aaa;
@@ -70,3 +100,4 @@ input.input-material~label {
     transition: all 0.2s;
     font-weight: 300;
   }
+
