@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { AppheaderComponent } from './components/appheader/appheader.component';
@@ -10,6 +10,7 @@ import { AppsettingsComponent } from './components/appsettings/appsettings.compo
 import { GeneralDashboardComponent } from './_pages/general-dashboard/general-dashboard.component';
 import { NavbarComponent } from './_pages/general-pages/navbar/navbar.component';
 import { DashboardBodyComponent } from './_pages/general-dashboard/dashboard-body/dashboard-body.component';
+import { TestPagesComponent } from './_pages/test-pages/test-pages.component';
 
 import { PasswordComponent } from './_pages/general-dashboard/password/password.component';
 import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-classes/organize-classes.component';
@@ -34,18 +35,23 @@ import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/imag
     NavbarComponent,
    DashboardBodyComponent,
 
+
    PasswordComponent,
    OrganizeClassesComponent,
    BlockUsersComponent,
    RecordsComponent,
 
-   ImageGalleryComponent
+   ImageGalleryComponent,
 
-  
+
+   TestPagesComponent
+ 
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
