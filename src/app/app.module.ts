@@ -17,7 +17,6 @@ import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-cl
 import { BlockUsersComponent } from './_pages/general-dashboard/block-users/block-users.component';
 import { RecordsComponent } from './_pages/general-dashboard/records/records.component';
 
-
 import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/image-gallery.component';
 import { LandingPageComponent } from './_pages/general-pages/landing-page/landing-page.component';
 import { CustomeRouter } from './app.routing';
@@ -25,9 +24,7 @@ import { Page404Component } from './_pages/general-pages/page404/page404.compone
 import { Page500Component } from './_pages/general-pages/page500/page500.component';
 import { LoginComponent } from './_pages/general-pages/login/login.component';
 
-
-
-
+import { UserProfileComponent } from './_pages/general-dashboard/user-profile/user-profile.component';
 
 
 
@@ -50,8 +47,15 @@ import { LoginComponent } from './_pages/general-pages/login/login.component';
     LandingPageComponent,
     Page404Component,
     Page500Component,
-    LoginComponent
-
+    LoginComponent,
+    DashboardBodyComponent,
+    PasswordComponent,
+    OrganizeClassesComponent,
+    BlockUsersComponent,
+    RecordsComponent,
+    ImageGalleryComponent,
+    TestPagesComponent,
+    UserProfileComponent
 
   ],
   imports: [
