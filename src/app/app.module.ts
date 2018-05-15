@@ -16,12 +16,16 @@ import { PasswordComponent } from './_pages/general-dashboard/password/password.
 import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-classes/organize-classes.component';
 import { BlockUsersComponent } from './_pages/general-dashboard/block-users/block-users.component';
 import { RecordsComponent } from './_pages/general-dashboard/records/records.component';
+<<<<<<< HEAD
 
 
 import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/image-gallery.component';
 
 
 
+=======
+import { UserProfileComponent } from './_pages/general-dashboard/user-profile/user-profile.component';
+>>>>>>> navbar and header implemented
 
 
 @NgModule({
@@ -40,12 +44,17 @@ import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/imag
    OrganizeClassesComponent,
    BlockUsersComponent,
    RecordsComponent,
+<<<<<<< HEAD
 
    ImageGalleryComponent,
 
 
    TestPagesComponent
  
+=======
+   UserProfileComponent
+  
+>>>>>>> navbar and header implemented
 
   ],
   imports: [
