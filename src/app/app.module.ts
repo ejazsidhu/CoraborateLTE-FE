@@ -19,6 +19,13 @@ import { RecordsComponent } from './_pages/general-dashboard/records/records.com
 
 
 import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/image-gallery.component';
+import { LandingPageComponent } from './_pages/general-pages/landing-page/landing-page.component';
+import { CustomeRouter } from './app.routing';
+import { Page404Component } from './_pages/general-pages/page404/page404.component';
+import { Page500Component } from './_pages/general-pages/page500/page500.component';
+import { LoginComponent } from './_pages/general-pages/login/login.component';
+
+
 
 
 
@@ -33,26 +40,29 @@ import { ImageGalleryComponent } from './_pages/general-pages/image-gallery/imag
     AppsettingsComponent,
     GeneralDashboardComponent,
     NavbarComponent,
-   DashboardBodyComponent,
+    DashboardBodyComponent,
+    PasswordComponent,
+    OrganizeClassesComponent,
+    BlockUsersComponent,
+    RecordsComponent,
+    ImageGalleryComponent,
+    TestPagesComponent,
+    LandingPageComponent,
+    Page404Component,
+    Page500Component,
+    LoginComponent
 
-
-   PasswordComponent,
-   OrganizeClassesComponent,
-   BlockUsersComponent,
-   RecordsComponent,
-
-   ImageGalleryComponent,
-
-
-   TestPagesComponent
- 
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomeRouter
+
   ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
