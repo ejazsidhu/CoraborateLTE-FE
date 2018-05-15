@@ -1,0 +1,68 @@
+ .input-field input[type=text]:focus + label {
+     color: #000;
+}
+/* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+
+
+input.input-material {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid lightgray;
+    padding: 10px 0;
+    color: #868e96;
+    font-weight: 300;
+    background-color: transparent;
+  }
+  
+  input.input-material.is-valid.ng-valid {
+    border-color: #28a745 !important;
+  }
+  .ng-valid {
+    border-color: #28a745 !important;
+  }
+  input.input-material.is-invalid {
+    border-color: #dc3545 !important;
+  }
+  
+  input.input-material:focus {
+    /* border-color: #33b35a; */
+    border-color: black;
+    outline: none;
+  }
+  
+  input.input-material~label {
+    color: #aaa;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+  }
+  
+  input.input-material~label.active {
+    font-size: 0.8rem;
+    top: -10px;
+    color: black;
+  }
+  
+  input.input-material.is-invalid~label {
+    color: #dc3545;
+  }
+  input:focus + label {
+    transform: translateY(-20px);
+  }
+  input:active + label {
+    transform: translateY(-20px);
+  }
+  
+
+  input.ng-dirty + label {
+    transform: translateY(-20px);
+  }
