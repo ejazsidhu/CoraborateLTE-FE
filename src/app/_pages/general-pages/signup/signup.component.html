@@ -1,0 +1,161 @@
+<div style=" text-align:center;background-color: #f76149; width:100%;height:100px;">
+  <img src="assets/Images/logo.png" alt="" style="margin-top:20px">
+</div>
+<div style="background: #f4f4f4; height:800px;max-height: 100%;" *ngIf=showIdentity>
+
+  <!-- <div style=" text-align:center;background-color: #f76149; width:100%;height:100px;">
+    <img src="assets/Images/logo.png" alt="" style="margin-top:20px">
+  </div> -->
+  <div style=" text-align:center; width:100%;height:100px;">
+    <img src="../../../../assets/Images/pages-icons/identity-code.png" alt="">
+
+  </div>
+
+  <div class="container-fluid" style="margin-top:200px">
+    <div class="">
+      <div class="form-inner">
+        <form method="get" class="text-left form-validate">
+          <div class="form-group-material">
+            <input size="100%" id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
+            <label for="login-username" class="label-material">@Secret Code</label>
+          </div>
+
+          <div class="text-center">
+            <a id="login" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;"
+              (click)=toggleIdentity()>join Now</a>
+
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- signup page -->
+<br>
+<div class="container-fluid" *ngIf=!showIdentity>
+  <p style="text-align:center;">
+    <img src="../../../../assets/Images/signup.png" class="img-fluid">
+  </p>
+  <br>
+  <br>
+  <br>
+
+  <form [formGroup]=signupForm>
+
+    <div class="form-group-material">
+      <input formControlName=firstName id="firstName" type="text" name="firstName" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched && signupForm.controls['firstName'].value.length < 4 ),'is-valid': (signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched && signupForm.controls['firstName'].value.length >= 4 )}">
+      <label for="firstName" class="label-material">First Name</label>
+      <span *ngIf="!signupForm.controls['firstName'].valid &&
+          signupForm.controls['firstName'].touched && signupForm.controls['firstName'].value.length < 4 " class="help-block sub-little-text"
+        style="color:red">
+        Minimum length is 4 charecters.</span>
+    </div>
+    <div class="form-group-material">
+      <input formControlName=lastName id="lastName" type="text" name="lastName" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['lastName'].valid && signupForm.controls['lastName'].touched && signupForm.controls['lastName'].value.length < 4 ),'is-valid': (signupForm.controls['lastName'].valid && signupForm.controls['lastName'].touched && signupForm.controls['lastName'].value.length >= 4 )}">
+      <label for="lastName" class="label-material">Last Name</label>
+      <span *ngIf="!signupForm.controls['lastName'].valid &&
+          signupForm.controls['lastName'].touched && signupForm.controls['lastName'].value.length < 4 " class="help-block sub-little-text"
+        style="color:red">
+        Minimum length is 4 charecters.</span>
+    </div>
+    <div class="form-group-material">
+      <input formControlName=email id="email" type="email" name="email" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['email'].valid && signupForm.controls['email'].touched),'is-valid': (signupForm.controls['email'].valid && signupForm.controls['email'].touched  )}">
+      <label for="email" class="label-material">Email</label>
+      <span *ngIf="!signupForm.controls['email'].valid &&
+            signupForm.controls['email'].touched " class="help-block sub-little-text"
+        style="color:red">
+        Enter a valid email address.</span>
+    </div>
+
+    <div class="row">
+      <div class="form-group-material">
+        <div class="col-md-6 col-lg-6">
+
+
+          <input formControlName=phoneNumber id="phoneNumber" type="text"
+           name="phoneNumber" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['phoneNumber'].valid && signupForm.controls['phoneNumber'].touched && signupForm.controls['phoneNumber'].value.length < 12 ),'is-valid': (signupForm.controls['phoneNumber'].valid && signupForm.controls['phoneNumber'].touched && signupForm.controls['phoneNumber'].value.length == 11 )}">
+          <label for="phoneNumber" class="label-material">Phone number</label>
+          <span *ngIf="!signupForm.controls['phoneNumber'].valid &&
+                signupForm.controls['phoneNumber'].touched && signupForm.controls['phoneNumber'].value.length < 4 " class="help-block sub-little-text"
+            style="color:red">
+            Enter a valid phone number.</span>
+
+        </div>
+        <div class="col-md-6 col-lg-6">
+
+          <input formControlName=verificationCode id="verificationCode" type="verificationCode" name="verificationCode" class="input-material "
+            [ngClass]="{'is-invalid ': (!signupForm.controls['verificationCode'].valid && signupForm.controls['verificationCode'].touched && signupForm.controls['verificationCode'].value.length < 4 ),'is-valid': (signupForm.controls['verificationCode'].valid && signupForm.controls['verificationCode'].touched && signupForm.controls['verificationCode'].value.length >= 4 )}">
+          <label for="verificationCode" class="label-material">Verification code</label>
+          <!-- <span *ngIf="!signupForm.controls['verificationCode'].valid &&
+                signupForm.controls['verificationCode'].touched && signupForm.controls['verificationCode'].value.length < 4 " class="help-block sub-little-text" style="color:red">
+                Enter a valid email address.</span> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group-material">
+
+      <input formControlName=dOB id="dOB" type="date" name="dOB" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['dOB'].valid && signupForm.controls['dOB'].touched && signupForm.controls['dOB'].value.length < 4 ),'is-valid': (signupForm.controls['dOB'].valid && signupForm.controls['dOB'].touched && signupForm.controls['dOB'].value.length >= 4 )}">
+      <label for="dOB" class="label-material">Date of Birth</label>
+      <span *ngIf="!signupForm.controls['dOB'].valid &&
+          signupForm.controls['dOB'].touched && signupForm.controls['dOB'].value.length < 4 " class="help-block sub-little-text"
+        style="color:red">
+        Enter a valid Date of birth.</span>
+    </div>
+    <div class="form-group-material">
+      <input formControlName="password" type="password" name="password"  required class="input-material ">
+      <label for="password" class="label-material">password</label>
+      <span *ngIf="!signupForm.controls['password'].valid &&
+             signupForm.controls['password'].touched  " class="help-block sub-little-text" style="color:red">
+        Minimum length is 4 charecters.</span>
+
+
+    </div>
+
+    <div class="form-group-material">
+      <input formControlName="repeatPassword" type="password"  name="repeatPassword" required class="input-material ">
+      <label for="repeatPassword" class="label-material">confirm password</label>
+      <span *ngIf="signupForm.controls['repeatPassword'].value != signupForm.controls['password'].value &&
+             (signupForm.controls['password'].touched || signupForm.controls['repeatPassword'].touched)" class="help-block sub-little-text"
+        style="color:red">Passwords don't match.</span>
+    </div>
+    <div class="form-group-material">
+
+      <select class="form-control" style="font-family: 'Montserrat', sans-serif; size:3.3pt; border-radius: .25rem; border-top:0px;border-left:0px;border-right:0px;">
+        <option>Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+  <br>
+  <br>
+  <div style="text-align:center;">
+    <button routerLink="/dashboard" type="button" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button>
+
+    <p>If you have already an account ?</p>
+    <a routerLink="/login">SIGN IN</a>
+  </div>
+  <br>
+  <br>
+
+
+</div>
+
+<!-- signup page ends -->

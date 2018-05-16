@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { EmailValidator } from '../../../../assets/validators';
+// import { EmailValidator } from '../../../../assets/validators';
 
 @Component({
   selector: 'app-login',
@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSubmit(m){
+    console.log(m)
   }
 
 }
