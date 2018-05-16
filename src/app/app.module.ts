@@ -25,6 +25,7 @@ import { Page500Component } from './_pages/general-pages/page500/page500.compone
 import { LoginComponent } from './_pages/general-pages/login/login.component';
 
 import { UserProfileComponent } from './_pages/general-dashboard/user-profile/user-profile.component';
+import { SignupComponent } from './_pages/general-pages/signup/signup.component';
 
 
 
@@ -55,7 +56,8 @@ import { UserProfileComponent } from './_pages/general-dashboard/user-profile/us
     RecordsComponent,
     ImageGalleryComponent,
     TestPagesComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SignupComponent
 
   ],
   imports: [

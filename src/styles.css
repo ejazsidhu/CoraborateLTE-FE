@@ -49,7 +49,7 @@ button.close:focus{
   }
   
   input.input-material.is-invalid {
-    border-color: #dc3545 !important;
+    border-color: red !important;
   }
   
   input.input-material:focus {
@@ -87,7 +87,7 @@ button.close:focus{
   }
   
   input.input-material.is-invalid~label {
-    color: #dc3545;
+    color: red;
   }
   /* for slect option login style classes */
   
@@ -111,7 +111,7 @@ button.close:focus{
   }
   
   select.input-material.is-invalid {
-    border-color: #dc3545 !important;
+    border-color: red !important;
   }
   
   select.input-material:focus {
@@ -138,5 +138,22 @@ button.close:focus{
   }
   
   select.input-material.is-invalid~label {
-    color: #dc3545;
+    color: red;
   }
+
+  input.input-material.is-valid~label {
+    color: #28a745;
+   }
+   input:focus + label {
+    transform: translateY(-20px);
+   }
+   input:active + label {
+    transform: translateY(-20px);
+   }
+   
+   
+   input.ng-dirty + label {
+    transform: translateY(-20px);
+   } 
+
+  
