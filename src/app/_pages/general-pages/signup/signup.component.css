@@ -103,13 +103,13 @@ input.input-material {
     color: red;
   }
   
-  label {
+  /* label {
 	transform: translateY(-20px);
-	}
+	} */
 	i {
 		transform:translateY(-35px);
 	}
-  input:focus + label {
+  /* input:focus + label {
     transform: translateY(-45px)!important;
   }
   input.ng-valid + label {
@@ -117,4 +117,4 @@ input.input-material {
   }
   input.ng-invalid + label {
     transform: translateY(-45px) !important;
-  }
+  } */

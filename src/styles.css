@@ -37,7 +37,7 @@ button.close:focus{
   input.input-material {
     width: 100%;
     border: none;
-    border-bottom: 3px solid lightgray;
+    border-bottom: 1px solid lightgray;
     padding: 10px 0;
     color: #868e96;
     font-weight: 300;
@@ -99,7 +99,7 @@ button.close:focus{
   select.input-material {
     width: 100%;
     border: none;
-    border-bottom: 3px solid lightgray;
+    border-bottom: 1px solid lightgray;
     padding: 10px 0;
     color: #868e96;
     font-weight: 300;

@@ -27,7 +27,7 @@
   border-color: #28a745 !important;
  }
  input.input-material.is-invalid {
-  border-color: #dc3545 !important;
+  border-color: red !important;
  }
 /* input.input-material:focus {
  border-color: #33b35a;
@@ -66,3 +66,4 @@ input:active + label {
 input.ng-dirty + label {
  transform: translateY(-20px);
 } */
+

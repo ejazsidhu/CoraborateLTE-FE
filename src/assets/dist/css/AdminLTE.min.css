@@ -2703,23 +2703,27 @@ a:hover, a:active, a:focus {
 
 .alert a {
 	color: #fff;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 .alert-success {
 	border-color: #008d4c;
+	opacity: .5;
 }
 
 .alert-danger, .alert-error {
 	border-color: #d73925;
+	opacity: .5;
 }
 
 .alert-warning {
 	border-color: #e08e0b;
+	opacity: .5;
 }
 
 .alert-info {
 	border-color: #00acd6;
+	opacity: .5;
 }
 
 .nav>li>a:hover, .nav>li>a:active, .nav>li>a:focus {
