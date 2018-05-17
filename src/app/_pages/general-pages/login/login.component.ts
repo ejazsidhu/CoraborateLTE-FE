@@ -18,6 +18,9 @@ import { Router } from '@angular/router'
 export class LoginComponent implements OnInit {
   // route:RouterModule;
   user: User;
+  successTrigger: boolean = true;
+   errorTrigger: boolean = true;
+   message='';
   public loginForm: FormGroup;
   constructor(private fb: FormBuilder,
     private ls: logincomponentservice,
@@ -36,7 +39,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(obj) {
-    obj.userName = "raemujahid@yahoo.com";
+    obj.userName = "raemujahid@yahoo.co";
     obj.password = "pakistan";
     this.ls.LoginService(obj.userName, obj.password ).subscribe(data => {
       
@@ -44,15 +47,22 @@ export class LoginComponent implements OnInit {
       console.log(this.user);
       // this.route.navigate(['HeroDetail', { id: this.hero.id }])
       //this.router.navigateByUrl(['show_alunos']);
-      this.router.navigate(['/landing']);
+      // this.router.navigate(['/landing']);
+      this.successTrigger=true;
     },
       Error => {
         console.log(Error);
         //  console.log(data);
         console.log("fail");
         
-      
+      this.errorTrigger=true;
+      this.message="this is error body";
       });
+
+
+      setTimeout(()=>{
+        this.errorTrigger=false;
+      },3000)
   }
 }
 
