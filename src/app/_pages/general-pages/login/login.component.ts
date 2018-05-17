@@ -50,6 +50,8 @@ export class LoginComponent implements OnInit {
         console.log(Error);
         //  console.log(data);
         console.log("fail");
+        
+      
       });
   }
 }
