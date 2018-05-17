@@ -25,6 +25,10 @@ import { Page404Component } from './_pages/general-pages/page404/page404.compone
 import { Page500Component } from './_pages/general-pages/page500/page500.component';
 import { LoginComponent } from './_pages/general-pages/login/login.component';
 
+import { AdminDashboardComponent } from './_pages/admin-dashboard/admin-dashboard.component';
+import { MasterDashboardComponent } from './_pages/master-dashboard/master-dashboard.component';
+
+
 import { UserProfileComponent } from './_pages/general-dashboard/user-profile/user-profile.component';
 import { SignupComponent } from './_pages/general-pages/signup/signup.component';
 
@@ -53,6 +57,8 @@ import {ConfigService} from './_services/config/config.service';
     Page404Component,
     Page500Component,
     LoginComponent,
+    AdminDashboardComponent,
+    MasterDashboardComponent,
     DashboardBodyComponent,
     PasswordComponent,
     OrganizeClassesComponent,
@@ -62,7 +68,6 @@ import {ConfigService} from './_services/config/config.service';
     TestPagesComponent,
     UserProfileComponent,
     SignupComponent
-
   ],
   imports: [
     BrowserModule,
@@ -72,7 +77,6 @@ import {ConfigService} from './_services/config/config.service';
     HttpModule
 
   ],
-
 
   providers: [
     ConfigService,
