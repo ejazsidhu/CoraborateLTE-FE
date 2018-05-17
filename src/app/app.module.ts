@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
@@ -28,6 +29,9 @@ import { UserProfileComponent } from './_pages/general-dashboard/user-profile/us
 import { SignupComponent } from './_pages/general-pages/signup/signup.component';
 
 
+import {logincomponentservice} from './_pages/general-pages/login/login.component.service';
+
+import {ConfigService} from './_services/config/config.service';
 
 @NgModule({
   declarations: [
@@ -64,12 +68,16 @@ import { SignupComponent } from './_pages/general-pages/signup/signup.component'
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomeRouter
+    CustomeRouter,
+    HttpModule
 
   ],
 
 
-  providers: [],
+  providers: [
+    ConfigService,
+    logincomponentservice,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
