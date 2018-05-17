@@ -12,6 +12,7 @@ export const appRoutes: Routes = [
         redirectTo: 'landing',
         pathMatch: 'full'
     },
+
     { path: 'landing', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
@@ -22,13 +23,8 @@ export const appRoutes: Routes = [
         children:[
             {path:'',component:SignupComponent}
         ]
-
-
     }
-
     // {path:'**',component:''}
 ]
-
-
 
 export const CustomeRouter: ModuleWithProviders = RouterModule.forRoot(appRoutes);
