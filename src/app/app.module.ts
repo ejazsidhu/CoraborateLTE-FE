@@ -24,12 +24,8 @@ import { CustomeRouter } from './app.routing';
 import { Page404Component } from './_pages/general-pages/page404/page404.component';
 import { Page500Component } from './_pages/general-pages/page500/page500.component';
 import { LoginComponent } from './_pages/general-pages/login/login.component';
-
-
-
-
-
-
+import { AdminDashboardComponent } from './_pages/admin-dashboard/admin-dashboard.component';
+import { MasterDashboardComponent } from './_pages/master-dashboard/master-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -50,9 +46,9 @@ import { LoginComponent } from './_pages/general-pages/login/login.component';
     LandingPageComponent,
     Page404Component,
     Page500Component,
-    LoginComponent
-
-
+    LoginComponent,
+    AdminDashboardComponent,
+    MasterDashboardComponent,
   ],
   imports: [
     BrowserModule,
