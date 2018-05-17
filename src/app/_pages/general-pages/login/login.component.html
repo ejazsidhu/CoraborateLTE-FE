@@ -1,4 +1,4 @@
-<div style="max-height: 100%;">
+<div style="min-height: 100%;background-color:#f4f4f4;">
 
 
     <img src="../../../../assets/Images/login.png" style="width: 100%" alt="">
@@ -13,7 +13,7 @@
           <form [formGroup]=loginForm (ngSubmit)=onSubmit(loginForm.value) class="text-left    ">
   
             <div class="form-group-material">
-              <input formControlName=userName id="userName" type="text" name="userName" class="input-material " [ngClass]="{'is-invalid ': (!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4  ), 'ng-valid': (loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length > 4 )}">
+              <input formControlName=userName id="userName" value="raemujahid@yahoo.com" type="text" name="userName" class="input-material " [ngClass]="{'is-invalid ': (!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4  ), 'ng-valid': (loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length > 4 )}">
               <label for="userName" class="label-material">User Name</label>
   
               <span *ngIf="!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4"
@@ -21,7 +21,7 @@
   
             </div>
             <div class="form-group-material">
-              <input formControlName=password id="password" type="password" name="password" class="input-material" [ngClass]="{'is-invalid ': (!loginForm.controls['password'].valid && loginForm.controls['password'].touched ), 'is-valid': (loginForm.controls['password'].valid && loginForm.controls['password'].touched )}">
+              <input formControlName=password id="password" value="pakistan" type="password" name="password" class="input-material" [ngClass]="{'is-invalid ': (!loginForm.controls['password'].valid && loginForm.controls['password'].touched ), 'is-valid': (loginForm.controls['password'].valid && loginForm.controls['password'].touched )}">
               <label for="password" class="label-material">Password</label>
   
               <span *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched " class="help-block sub-little-text"
@@ -38,12 +38,12 @@
             <br>
             <div class="i-checks">
               <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
-              <label for="checkboxCustom1">Remember password</label>
+              <label for="checkboxCustom1" style="transform:none;">Remember password</label>
             </div>
-            <div style="padding-top:30px">
+            <div style="padding-top:30px;padding-bottom: 30px;">
               <small>New to Coraborate? </small>
               <br>
-              <a href="register.html" class="signup" style="color:lightgray">Signup</a>
+              <a routerLink="/signup" class="signup" style="color:lightgray">Signup</a>
             </div>
   
           </div>

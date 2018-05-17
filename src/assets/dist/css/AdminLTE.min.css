@@ -153,7 +153,7 @@ body {
 }
 
 .content {
-	min-height: 250px;
+	/* min-height: 100% !important; */
 	padding: 19px;
 	margin-right: auto;
 	margin-left: auto;
@@ -261,8 +261,8 @@ a:hover, a:active, a:focus {
 	/* padding: 15px 15px; */
 	font-family: fontAwesome;
 	/* custome font-size and padding */
-	padding: 15px 20px;
-	font-size: 25px
+	padding: 23px 30px;
+	font-size: 30px;
 }
 
 .main-header .sidebar-toggle:before {
@@ -617,7 +617,7 @@ a:hover, a:active, a:focus {
 		-ms-transform: translate(0, 0);
 		-o-transform: translate(0, 0);
 		transform: translate(0, 0);
-		width: 50px !important;
+		width: 85px !important;
 		z-index: 850;
 	}
 	.sidebar-mini.sidebar-collapse .sidebar-menu>li {
@@ -631,8 +631,18 @@ a:hover, a:active, a:focus {
 	}
 	.sidebar-mini.sidebar-collapse .sidebar-menu>li:not(.treeview)>a>span {
 		border-bottom-right-radius: 4px;
-		box-shadow: 0px 5px 8px 0px #c7c6c6;
+		box-shadow: 5px 1px 8px -1px #c7c6c6;
+		height: 58px;
 	}
+
+	/* .sidebar-mini.sidebar-collapse .sidebar-menu>li:hover(.treeview)>a>span {
+		border-bottom-right-radius: 4px;
+		/* box-shadow: 0px 5px 8px 0px #c7c6c6; *
+		height: 50px;
+		background-color: red;
+	} */
+
+
 	.sidebar-mini.sidebar-collapse .sidebar-menu>li>.treeview-menu {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -643,7 +653,7 @@ a:hover, a:active, a:focus {
 		-webkit-transform: translateZ(0);
 	}
 	.sidebar-mini.sidebar-collapse .main-header .logo {
-		width: 50px;
+		width: 85px;
 	}
 	.sidebar-mini.sidebar-collapse .main-header .logo>.logo-mini {
 		display: block;
@@ -655,7 +665,7 @@ a:hover, a:active, a:focus {
 		display: none;
 	}
 	.sidebar-mini.sidebar-collapse .main-header .navbar {
-		margin-left: 50px;
+		margin-left: 85px;
 	}
 }
 
@@ -663,9 +673,9 @@ a:hover, a:active, a:focus {
 	display: block !important;
 	position: absolute;
 	/* width: 180px; */
-	left: 50px;
+	left: 78px;
 	/* custom added */
-	padding: 10px 10px;
+	padding: 21px 10px;
 }
 
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>span {
@@ -1156,7 +1166,7 @@ a:hover, a:active, a:focus {
 	border-top-left-radius: 0;
 	padding: 1px 0 0 0;
 	border-top-width: 0;
-	width: 210px;
+	width: 221px;
 }
 
 .navbar-nav>.user-menu>.dropdown-menu, .navbar-nav>.user-menu>.dropdown-menu>.user-body {
@@ -1335,8 +1345,8 @@ a:hover, a:active, a:focus {
 
 .navbar-custom-menu>.navbar-nav>li>.dropdown-menu {
 	position: absolute;
-	right: 15px;
-	left: auto;
+    right: 30px;
+    left: auto;
 	box-shadow: 0px 5px 8px 0px #c7c6c6;
 }
 
@@ -1349,7 +1359,7 @@ a:hover, a:active, a:focus {
 	}
 	.navbar-custom-menu>.navbar-nav>li>.dropdown-menu {
 		position: absolute;
-		right: 2%;
+		right: 5%;
 		left: auto;
 		border: 1px solid #ddd;
 		background: #fff;

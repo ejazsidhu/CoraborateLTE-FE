@@ -516,15 +516,19 @@ a:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+  /* background-color: red; */
 }
 .sidebar-menu > li {
   position: relative;
   margin: 0;
   padding: 0;
+  /* color: #001f3f; */
+
 }
 .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
   display: block;
+  background-color: #001f3f;
 }
 .sidebar-menu > li > a > .fa,
 .sidebar-menu > li > a > .glyphicon,
