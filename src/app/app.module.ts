@@ -36,6 +36,8 @@ import { SignupComponent } from './_pages/general-pages/signup/signup.component'
 import {logincomponentservice} from './_pages/general-pages/login/login.component.service';
 
 import {ConfigService} from './_services/config/config.service';
+import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
+import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admin-navbar.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import {ConfigService} from './_services/config/config.service';
     ImageGalleryComponent,
     TestPagesComponent,
     UserProfileComponent,
-    SignupComponent
+    SignupComponent,
+    AdminDashboardBodyComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
