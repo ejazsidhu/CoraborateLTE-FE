@@ -20,6 +20,10 @@
 }
 
  */
+
+ body{
+  height: 120% ;background-color:#f4f4f4;
+ }
  input.input-material.is-valid.ng-valid {
   border-color: #28a745 !important;
  }
@@ -28,6 +32,13 @@
  }
  input.input-material.is-invalid {
   border-color: red !important;
+ }
+
+ .close{
+  position: relative;
+  top: -8px;
+  right: -26px;
+  color: inherit;
  }
 /* input.input-material:focus {
  border-color: #33b35a;

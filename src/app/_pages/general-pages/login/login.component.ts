@@ -18,8 +18,8 @@ import { Router } from '@angular/router'
 export class LoginComponent implements OnInit {
   // route:RouterModule;
   user: User;
-  successTrigger: boolean = true;
-   errorTrigger: boolean = true;
+  successTrigger: boolean = false;
+   errorTrigger: boolean = false;
    message='';
   public loginForm: FormGroup;
   constructor(private fb: FormBuilder,
@@ -39,28 +39,39 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(obj) {
-    obj.userName = "raemujahid@yahoo.co";
-    obj.password = "pakistan";
+    // obj.userName = "raemujahid@yahoo.com";
+    // obj.password = "pakistan";
     this.ls.LoginService(obj.userName, obj.password ).subscribe(data => {
       
       this.user = data.ResponseData;
       console.log(this.user);
       // this.route.navigate(['HeroDetail', { id: this.hero.id }])
       //this.router.navigateByUrl(['show_alunos']);
-      // this.router.navigate(['/landing']);
-      this.successTrigger=true;
+
+      this.router.navigate(['/dashboard']);
+
+      // this.successTrigger=true;
     },
       Error => {
+        if(Error.status==404)
+        {this.errorTrigger=true;
+          let errormsg= JSON.parse(Error._body);
+
+          this.message= errormsg.Message;
+          // this.loginForm.reset();
+          ;
+          
+        }
         console.log(Error);
         //  console.log(data);
         console.log("fail");
         
-      this.errorTrigger=true;
-      this.message="this is error body";
+      // this.errorTrigger=true;
+      // this.message="this is error body";
       });
       setTimeout(()=>{
         this.errorTrigger=false;
-      },3000)
+      },2000)
   }
 }
 
