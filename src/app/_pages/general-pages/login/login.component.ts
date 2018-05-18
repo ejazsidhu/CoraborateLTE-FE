@@ -47,7 +47,8 @@ export class LoginComponent implements OnInit {
       console.log(this.user);
       // this.route.navigate(['HeroDetail', { id: this.hero.id }])
       //this.router.navigateByUrl(['show_alunos']);
-
+      let Currentuser = JSON.stringify(this.user);
+      sessionStorage.setItem('CurrentUser', Currentuser);
       this.router.navigate(['/dashboard']);
 
       // this.successTrigger=true;

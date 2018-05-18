@@ -34,6 +34,7 @@ import { SignupComponent } from './_pages/general-pages/signup/signup.component'
 
 
 import {logincomponentservice} from './_pages/general-pages/login/login.component.service';
+import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
 import {ConfigService} from './_services/config/config.service';
 import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
@@ -85,6 +86,7 @@ import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admi
   providers: [
     ConfigService,
     logincomponentservice,
+    navbarcomponentservice
   ],
   bootstrap: [AppComponent]
 })
