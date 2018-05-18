@@ -39,21 +39,31 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(obj) {
-    obj.userName = "raemujahid@yahoo.co";
-    obj.password = "pakistan";
+    // obj.userName = "raemujahid@yahoo.com";
+    // obj.password = "pakistan";
     this.ls.LoginService(obj.userName, obj.password ).subscribe(data => {
-      
+      this.user= null;
       this.user = data.ResponseData;
-      console.log(this.user);
+      // console.log(this.user);
+
+      let CurrentUser= JSON.stringify(this.user);
+      sessionStorage.removeItem('CurrentUser');
+      // console.log(sessionStorage.removeItem('CurrentUser'));
+      sessionStorage.setItem('CurrentUser',CurrentUser);
+      // console.log(sessionStorage.getItem('CurrentUser')) ;
+      
+      let CurrentUserObj: User = JSON.parse(sessionStorage.getItem('CurrentUser'));
+      // console.log("this is jsonParse");
+      // console.log(CurrentUserObj);
       // this.route.navigate(['HeroDetail', { id: this.hero.id }])
       //this.router.navigateByUrl(['show_alunos']);
-      // this.router.navigate(['/landing']);
+      this.router.navigate(['/landing']);
       this.successTrigger=true;
     },
       Error => {
-        console.log(Error);
+        // console.log(Error);
         //  console.log(data);
-        console.log("fail");
+        // console.log("fail");
         
       this.errorTrigger=true;
       this.message="this is error body";
