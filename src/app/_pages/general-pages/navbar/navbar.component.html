@@ -12,121 +12,137 @@
     </a>
     <nav class="navbar navbar-static-top">
 
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
-           <!--    <span class="sr-only">Toggle navigation</span>
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
+        <!--    <span class="sr-only">Toggle navigation</span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                
            </a> -->
-           <div class="navbar-custom-menu">
-               <ul class="nav navbar-nav">
-                   <li style="width:57px;">
-                       <a>
-                           <img src="assets/Images/user2-160x160.jpg" class="user-image" alt="User Image" style="width: 50px; margin-left: -17px; border-radius: 50%; margin-top: 3px;">
-                       </a>
-                   </li>
-                   <li class="dropdown user user-menu">
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #ffffff !important; color: black;padding: 20px 0px 22px !important;margin-right: 30px;">
-                           <span class="">
-                               <span id="lblGreetings" style="margin-bottom: 0px!important; font-size: 16px; color: #8e8e8e;">Good Morning!</span>
-                               <br /><b style="font-size: 16px">Muhammad ibrahim </b>
-                               <i class="fa fa-fw fa-caret-down" style="font-size: 21px;"></i>
-                           </span>
-                       </a>
-                       <ul class="dropdown-menu unrLine">
-   
-                           <li style=" height: 65px; box-shadow: 0px 3px 3px 0px #c7c6c6; cursor: pointer;">
-                               <a class="profileExpand">
-                                   <i><img src="assets/Images/profile.png" ></i>
-                                </a>
-                                <div id="line"></div>
-                                <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Profile</b>
-                               
-                           </li>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li style="width:57px;">
+                    <a>
+                        <img src="assets/Images/user2-160x160.jpg" class="user-image" alt="User Image" style="width: 50px; margin-left: -17px; border-radius: 50%; margin-top: 3px;">
+                    </a>
+                </li>
+                <li *ngIf="ClassesView" class="dropdown user user-menu">
+                    <!-- <*ngIf="ClassesView"> -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #ffffff !important; color: black;padding: 20px 0px 22px !important;margin-right: 30px;">
+                        <span class="">
+                            <span id="lblGreetings" style="margin-bottom: 0px!important; font-size: 16px; color: #8e8e8e;">Good Morning!</span>
+                            <br />
+                            <b style="font-size: 16px">MI {{ClassesView.UserName}}</b>
+                            <i class="fa fa-fw fa-caret-down" style="font-size: 21px;"></i>
+                        </span>
+                    </a>
+                    <!-- </div> -->
+                    <ul class="dropdown-menu unrLine">
 
-                           <li style=" height: 65px; cursor: pointer;">
+                        <li style=" height: 65px; box-shadow: 0px 3px 3px 0px #c7c6c6; cursor: pointer;">
                             <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Password</b>
-                            
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Profile</b>
+
                         </li>
-<!-- 
+
+                        <li style=" height: 65px; cursor: pointer;">
+                            <a class="profileExpand">
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Password</b>
+
+                        </li>
+                        <!-- 
                            <li>
                                <a>
                                    <i class="fa fa-fw fa-gears"></i>Password
                                </a>
                            </li> -->
-                           <!-- <li>
+                        <!-- <li>
                                <a>
                                    <i class="fa fa-fw fa-gears"></i>Forget Password
                                </a>
                            </li> -->
-                           <li style=" height: 65px; cursor: pointer;">
-                            <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Help</b>
-                            
-                        </li>
-                        <li style="     border-bottom: 0px; height: 65px; cursor: pointer;">
-                            <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Log Out</b>
-                            
-                        </li>
-                       </ul>
-                       <ul class="dropdown-menu unrLine" style="right:253px !important;">
-   
                         <li style=" height: 65px; cursor: pointer;">
                             <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Download Records</b>
-                            
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Help</b>
+
+                        </li>
+                        <li (click)="Logout()" style="border-bottom: 0px; height: 65px; cursor: pointer;">
+                            <a class="profileExpand">
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Log Out</b>
+                        </li>
+                    </ul>
+                    <ul class="dropdown-menu unrLine" style="right:253px !important;">
+
+                        <li style=" height: 65px; cursor: pointer;">
+                            <a class="profileExpand">
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Download Records</b>
+
                         </li>
                         <li style=" height: 65px;  cursor: pointer;">
                             <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Block Users</b>
-                            
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Block Users</b>
+
                         </li>
                         <li style="    border-bottom: 0px; height: 65px;  cursor: pointer;">
                             <a class="profileExpand">
-                                <i><img src="assets/Images/profile.png" ></i>
-                             </a>
-                             <div id="line"></div>
-                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Organize Classes</b>
-                            
+                                <i>
+                                    <img src="assets/Images/profile.png">
+                                </i>
+                            </a>
+                            <div id="line"></div>
+                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Organize Classes</b>
+
                         </li>
-                           <!-- <li style="border-bottom: 0px solid!important;">
+                        <!-- <li style="border-bottom: 0px solid!important;">
                                <a>
                                    <i class="fa fa-fw fa-calendar"></i> DashBoard
                                </a>
                            </li> -->
-                           <!-- <li style="border-bottom: 0px solid!important;">
+                        <!-- <li style="border-bottom: 0px solid!important;">
                                <a>
                                    <i class="fa fa-fw fa-calendar"></i> msg
                                </a>
                            </li> -->
-                           <!-- <li>
+                        <!-- <li>
                                <a>people</a>
                            </li> -->
-                       </ul>
-                   </li>
-               </ul>
-           </div>
-   
-   
-       </nav>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
     <!-- Header Navbar: style can be found in header.less -->
     <!-- <nav class="navbar navbar-static-top">
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -154,11 +170,11 @@
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
-             
-               
-                <!-- Tasks: style can be found in dropdown.less -->
-               
-                <!-- User Account: style can be found in dropdown.less --
+
+
+    <!-- Tasks: style can be found in dropdown.less -->
+
+    <!-- User Account: style can be found in dropdown.less --
                 <li class="dropdown user user-menu">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="assets/Images/user2-160x160.jpg" class="user-image" alt="User Image">
@@ -212,8 +228,8 @@
 <aside class="main-sidebar">
     <!-- style="overflow-x: scroll; height: 80%; margin-top: 176px;" -->
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar" style="height: 80%; margin-top:150px !important; ">
-        <ul class="sidebar-menu" data-widget="tree">
+    <section  class="sidebar" style="height: 80%; margin-top:150px !important; ">
+        <ul *ngIf="ClassesView" class="sidebar-menu" data-widget="tree">
             <!-- style="margin-left: 20px;" -->
             <!-- <li class="heading">
                 <a>
@@ -231,51 +247,17 @@
                     </i>
                 </a>
             </li>
-            <li>
+            <li *ngFor="let item of ClassesView.OwnClassess">
                 <a style="padding-left: 3px;" href="#">
                     <i>
                         <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
                     </i>
-                    <span class="subHeading">Important 23</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 3px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
-                    </i>
-                    <span class="subHeading">Important 23</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 3px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
-                    </i>
-                    <span class="subHeading">Important 23</span>
-                </a>
-            </li>
-            <li>
-                <a style="padding-left: 3px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/geometry.svg" alt="">
-                    </i>
-                    <span class="subHeading">Warning</span>
-                </a>
-            </li>
-            <li>
-                <a style="padding-left: 3px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/literature.svg" alt="">
-                    </i>
-                    <span class="subHeading">Information</span>
+                    <span class="subHeading"> {{item.OwnClassName}}</span>
                 </a>
             </li>
         </ul>
         <hr style="width:100%">
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul *ngIf="ClassesView" class="sidebar-menu" data-widget="tree">
 
             <li class="heading">
                 <a style="padding-left: 5px;">
@@ -284,60 +266,17 @@
                         <img src="../assets/Images/add-plus-button.png"> </i>
                 </a>
             </li>
-            <li>
-                <a style="padding-left: 5px;" href="#">
+            <li *ngFor="let item of ClassesView.JoinClassess">
+                <a style="padding-left: 3px;" href="#">
                     <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/math.svg" alt="">
+                        <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
                     </i>
-                    <span class="subHeading">Important</span>
-                </a>
-            </li>
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/soccer.svg" alt="">
-                    </i>
-                    <span class="subHeading">Warning</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/soccer.svg" alt="">
-                    </i>
-                    <span class="subHeading">Warning</span>
-                </a>
-            </li>
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/soccer.svg" alt="">
-                    </i>
-                    <span class="subHeading">Warning</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/soccer.svg" alt="">
-                    </i>
-                    <span class="subHeading">Warning</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/ClassIcons/math.svg" alt="">
-                    </i>
-                    <span class="subHeading">Information</span>
+                    <span class="subHeading"> {{item.JoinClassName}}</span>
                 </a>
             </li>
         </ul>
         <hr style="width:100%">
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul *ngIf="CurrentUserObj.ShoolName" class="sidebar-menu" data-widget="tree">
             <li class="heading">
                 <a style="padding-left: 5px;">
                     <span style="margin-right: 140px;">SCHOOL</span>
@@ -350,52 +289,18 @@
                     <i>
                         <img class="classHeading" src="../assets/Images/all-classes.png" alt="">
                     </i>
-                    <span class="subHeading">All Classes</span>
+                    <span class="subHeading">{{CurrentUserObj.ShoolName}}</span>
                 </a>
             </li>
-            <li>
+            <!-- <li *ngIf="school">
                 <a style="padding-left: 5px;" href="#">
                     <i>
                         <img class="classHeading" src="../assets/Images/school-7.png" alt="">
                     </i>
-                    <span class="subHeading">Alide School</span>
+                    <span class="subHeading">{{CurrentUserObj.ShoolName}}}</span>
                 </a>
-            </li>
+            </li> -->
 
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/school-7.png" alt="">
-                    </i>
-                    <span class="subHeading">Alide School</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/school-7.png" alt="">
-                    </i>
-                    <span class="subHeading">Alide School</span>
-                </a>
-            </li>
-
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/school-7.png" alt="">
-                    </i>
-                    <span class="subHeading">Alide School</span>
-                </a>
-            </li>
-            <li>
-                <a style="padding-left: 5px;" href="#">
-                    <i>
-                        <img class="classHeading" src="../assets/Images/calendar-2.png" alt="">
-                    </i>
-                    <span class="subHeading">Anual Calender</span>
-                </a>
-            </li>
             <!-- <li class="heading"><a  > <span>Documentation</span> <i class="fa fa-book"></i></a> </li>
                   <li class="heading"><a  > <span>Documentation</span> <i class="fa fa-book"></i></a> </li>
                   <li class="heading"><a  > <span>Documentation</span> <i class="fa fa-book"></i></a> </li> -->

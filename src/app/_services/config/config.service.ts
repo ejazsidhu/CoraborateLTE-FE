@@ -11,6 +11,7 @@ export class ConfigService  {
   public api = 'api/CoraborateWebAPI';
   public API_KEY = 'X-SF4_?4$';
   public apiAccount= 'api/AccountWebAPI';
+  public apiE2E= 'api/E2EWebAPI';
 
   constructor(private http: Http) { }
 
@@ -20,6 +21,14 @@ export class ConfigService  {
     }
     else
       return this.ip + "/" + this.api + "/" + controlerAction;
+  }
+
+  urlBuilderE2E(controlerAction) {
+    if (this.port != '') {
+      return this.ip + ":" + this.port + "/" + this.apiE2E + "/" + controlerAction;
+    }
+    else
+      return this.ip + "/" + this.apiE2E + "/" + controlerAction;
   }
 
   urlBuilderAccounts(controlerAction) {
@@ -33,6 +42,8 @@ export class ConfigService  {
   headerCTJson() {
     let header = new Headers({ 'content-type': 'application/json' });
     header.append("API_KEY", this.API_KEY);
+    header.append("Access-Control-Allow-Origin", "*");
+    
     return header;
   }
 
