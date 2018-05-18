@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
       email:['',Validators.compose([Validators.required,EmailValidator.validate])],
       phoneNumber:['',Validators.compose([Validators.required,AmountValidator.validate,])],
       verificationCode:['',Validators.required],
-      dOB:['',Validators.required],
+      dOB:['',Validators.required,AmountValidator.validate],
       gender:['',Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
       repeatPassword: ['', Validators.compose([Validators.required, Validators.minLength(4)])]
