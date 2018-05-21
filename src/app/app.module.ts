@@ -39,6 +39,9 @@ import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.com
 import {ConfigService} from './_services/config/config.service';
 import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
 import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admin-navbar.component';
+import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component'
+import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service'
+
 
 @NgModule({
   declarations: [
@@ -72,7 +75,8 @@ import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admi
     UserProfileComponent,
     SignupComponent,
     AdminDashboardBodyComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,8 @@ import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admi
   providers: [
     ConfigService,
     logincomponentservice,
-    navbarcomponentservice
+    navbarcomponentservice,
+    authenticationcomponentservice
   ],
   bootstrap: [AppComponent]
 })

@@ -6,13 +6,13 @@
     
     <div class="container" style="margin-top:30px;">
        <!-- success message -->
-    <div *ngIf="successTrigger" class="alert alert-success alert-dismissable ">
+    <div *ngIf="successTrigger" style="position: absolute; top: 318px; width: 100%;" class="alert alert-success alert-dismissable ">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
       <i class="fa fa-comment fa-fw"></i>
       <strong>{{message}}success message</strong>
      </div>
      <!-- error message -->
-     <div *ngIf="errorTrigger" class="alert alert-danger alert-dismissable  ">
+     <div *ngIf="errorTrigger" style="position: absolute; top: 318px; width: 100%;"class="alert alert-danger alert-dismissable  ">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
       <i class="fa fa-ban fa-fw"></i>
       <strong>{{message}}</strong>
@@ -35,10 +35,10 @@
       <div class="">
         <div class="form-inner">
   
-          <form [formGroup]=loginForm (ngSubmit)=onSubmit(loginForm.value) class="text-left    ">
+          <form [formGroup]=loginForm (ngSubmit)=onSubmit(loginForm.value) class="text-left">
   
             <div class="form-group-material">
-              <input formControlName=userName id="userName" value="raemujahid@yahoo.com" type="text" name="userName" class="input-material " [ngClass]="{'is-invalid ': (!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4  ), 'ng-valid': (loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length > 4 )}">
+              <input formControlName=userName id="userName" type="text" name="userName" class="input-material " [ngClass]="{'is-invalid ': (!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4  ), 'ng-valid': (loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length > 4 )}">
               <label for="userName" class="label-material">User Name</label>
   
               <span *ngIf="!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4"
@@ -46,7 +46,7 @@
   
             </div>
             <div class="form-group-material">
-              <input formControlName=password id="password" value="pakistan" type="password" name="password" class="input-material" [ngClass]="{'is-invalid ': (!loginForm.controls['password'].valid && loginForm.controls['password'].touched ), 'is-valid': (loginForm.controls['password'].valid && loginForm.controls['password'].touched )}">
+              <input formControlName=password id="password" type="password" name="password" class="input-material" [ngClass]="{'is-invalid ': (!loginForm.controls['password'].valid && loginForm.controls['password'].touched ), 'is-valid': (loginForm.controls['password'].valid && loginForm.controls['password'].touched )}">
               <label for="password" class="label-material">Password</label>
   
               <span *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched " class="help-block sub-little-text"

@@ -1,0 +1,90 @@
+<div style=" text-align:center;background-color: #f76149; width:100%;height:100px;">
+  <img src="assets/Images/logo.png" alt="" style="margin-top:20px">
+</div>
+
+<div style="background: #f4f4f4; height:800px;max-height: 100%;" *ngIf=showIdentity>
+
+  <!-- <div style=" text-align:center;background-color: #f76149; width:100%;height:100px;">
+    <img src="assets/Images/logo.png" alt="" style="margin-top:20px">
+  </div> -->
+  <div style=" text-align:center; width:100%;height:100px;">
+    <img src="../../../../assets/Images/pages-icons/identity-code.png" alt="">
+
+  </div>
+
+  <div class="container-fluid" style="margin-top:200px">
+
+   
+    <div class="">
+      <!-- <div class="form-inner">
+        <form method="get" class="text-left form-validate">
+          <div class="form-group-material">
+            <input size="100%" id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
+            <label for="login-username" class="label-material">@Secret Code</label>
+          </div>
+
+          <div class="text-center">
+            <a id="login" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;"
+              (click)=toggleIdentity()>join Now</a>
+
+          </div>
+        </form>
+
+      </div> -->
+
+      <div class="form-inner">
+         
+        <form [formGroup]=AuthenticationForm (ngSubmit)=onSubmit(AuthenticationForm.value) class="text-left">
+            <div *ngIf="successTrigger" class="alert alert-success alert-dismissable ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <i class="fa fa-comment fa-fw"></i>
+                <strong>{{message}}success message</strong>
+               </div>
+               <!-- error message -->
+               <div *ngIf="errorTrigger" class="alert alert-danger alert-dismissable  ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <i class="fa fa-ban fa-fw"></i>
+                <strong style="font-weight: normal; font-family: align-self;">{{message}}</strong>
+               </div>
+<!-- 
+          <div class="form-group-material">
+            <input formControlName=userName id="userName" type="text" name="userName" class="input-material " [ngClass]="{'is-invalid ': (!Authentication.controls['userName'].valid && AuthenticationForm.controls['userName'].touched && AuthenticationForm.controls['userName'].value.length < 4  ), 'ng-valid': (AuthenticationForm.controls['userName'].valid && AuthenticationForm.controls['userName'].touched && AuthenticationForm.controls['userName'].value.length > 4 )}">
+            <label for="userName" class="label-material">User Name</label>
+
+            <span *ngIf="!loginForm.controls['userName'].valid && loginForm.controls['userName'].touched && loginForm.controls['userName'].value.length < 4"
+              class="help-block sub-little-text" style="color:red">user name is required.please enter minimum 4 characters.</span>
+
+          </div> -->
+          <div class="form-group-material">
+            <input formControlName=SecretCode id="SecretCode" type="text" name="SecretCode" class="input-material" [ngClass]="{'is-invalid ': (!AuthenticationForm.controls['SecretCode'].valid && AuthenticationForm.controls['SecretCode'].touched ), 'is-valid': (AuthenticationForm.controls['SecretCode'].valid && AuthenticationForm.controls['SecretCode'].touched )}">
+            <label for="SecretCode" class="label-material">@Secret Code</label>
+
+            <span *ngIf="!AuthenticationForm.controls['SecretCode'].valid && AuthenticationForm.controls['SecretCode'].touched " class="help-block sub-little-text"
+              style="color:red">Secret Code is required.</span>
+
+          </div>
+          <div class="form-group text-center">
+            <button [disabled]="!AuthenticationForm.valid" type="submit" id="login" class="btn btn-primary" style=" border :none;background-color: #f76149 ;width: 130px;border-radius: 4px;">Join Now</button>
+
+          </div>
+        </form>
+        <!-- <div style="text-align: center">
+          <a href="#" class="forgot-pass text-center" style="color:lightgray">Forgot Password?</a>
+          <br>
+          <div class="i-checks">
+            <input id="checkboxCustom1" type="checkbox" value="" class="form-control-custom">
+            <label for="checkboxCustom1" style="transform:none;">Remember password</label>
+          </div>
+          <div style="padding-top:30px;padding-bottom: 30px;">
+            <small>New to Coraborate? </small>
+            <br>
+            <a routerLink="/signup" class="signup" style="color:lightgray">Signup</a>
+          </div>
+
+        </div> -->
+      </div>
+
+
+    </div>
+  </div>
+</div>
