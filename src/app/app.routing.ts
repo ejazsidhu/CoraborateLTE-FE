@@ -5,9 +5,13 @@ import { LandingPageComponent } from './_pages/general-pages/landing-page/landin
 import { LoginComponent } from './_pages/general-pages/login/login.component';
 import { SignupComponent } from './_pages/general-pages/signup/signup.component';
 import { GeneralDashboardComponent } from './_pages/general-dashboard/general-dashboard.component';
+
 import { DashboardBodyComponent} from './_pages/general-dashboard/dashboard-body/dashboard-body.component';
 // import {AuthenticationComponent} from './_pages/general-pages/Authentication/authentication.component';
 import {AuthenticationComponent} from './_pages/general-pages/Authentication/authentication.component'
+
+import { AuthGuard } from './_routerGuards/auth/auth.guard';
+
 export const appRoutes: Routes = [
 
     {
@@ -25,6 +29,7 @@ export const appRoutes: Routes = [
     {
         path: 'dashboard',
         component:GeneralDashboardComponent,
+        canActivate:[AuthGuard],
         children:[
             {path:'',component:SignupComponent},
             // {path:'dashboard/DashboardBody',component:DashboardBodyComponent}

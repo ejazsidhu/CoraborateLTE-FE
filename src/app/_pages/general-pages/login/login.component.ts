@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group(
       {
 
-        userName: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
-        password: ['', Validators.compose([Validators.required])]
+        userName: ['raemujahid@yahoo.com', Validators.compose([Validators.required, Validators.minLength(4)])],
+        password: ['pakistan', Validators.compose([Validators.required])]
 
       });
   }
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('CurrentUser', Currentuser);
       this.router.navigate(['/dashboard']);
 
-      // this.successTrigger=true;
+      this.successTrigger=true;
     },
       Error => {
         if(Error.status==404)
