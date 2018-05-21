@@ -70,9 +70,9 @@ export class LoginComponent implements OnInit {
       // this.errorTrigger=true;
       // this.message="this is error body";
       });
-      setTimeout(()=>{
-        this.errorTrigger=false;
-      },2000)
+      // setTimeout(()=>{
+      //   this.errorTrigger=false;
+      // },2000)
   }
 }
 

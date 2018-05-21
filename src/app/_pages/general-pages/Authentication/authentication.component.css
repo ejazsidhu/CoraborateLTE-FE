@@ -1,0 +1,120 @@
+/* input:focus + label {
+    transform: translateY(-20px);
+   }
+   input:active + label {
+    transform: translateY(-20px);
+   }
+   
+   
+   input.ng-dirty + label {
+    transform: translateY(-20px);
+   } */
+
+   /* .logox {
+    background-image:url('../img/logo.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+} */
+
+.pagact {
+	background-color:rgb(247, 96, 73);
+	color: #fff;
+}
+p
+{
+	margin-top: 0;
+    margin-bottom: 0rem;
+}
+a {
+	padding-top:0px;
+	color: #000;
+	margin-top: 0;
+    margin-bottom: 0rem;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+.form-group-material {
+	position:relative;
+	margin-top:30px;
+	margin-left:90px;
+	margin-right:90px;
+}
+
+input.input-material {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+    color: #868e96;
+    font-weight: 300;
+    background-color: transparent;
+  }
+  
+  input.input-material.is-valid {
+    border-color: #28a745 !important;
+   }
+   input.is-valid {
+    border-color: #28a745 !important;
+   }
+   input.input-material.is-invalid {
+    border-color: red !important;
+   }
+  
+  input.input-material:focus {
+
+    border-color: #7a7a52;
+    outline: none;
+  }
+  
+  input.input-material~label {
+    color: #aaa;
+    top: 14px;
+    left: 0;
+    cursor: text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-weight: 300;
+  }
+  
+  input.input-material~label.active {
+    font-size: 0.8rem;
+    top: -10px;
+    color: black;
+  }
+  
+  input.input-material.is-valid~label {
+    color: #28a745;
+  }
+  input.input-material.is-invalid~label {
+    color: red;
+  }
+  
+  /* label {
+	transform: translateY(-20px);
+	} */
+	i {
+		transform:translateY(-35px);
+	}
+  /* input:focus + label {
+    transform: translateY(-45px)!important;
+  }
+  input.ng-valid + label {
+    transform: translateY(-45px) !important;
+  }
+  input.ng-invalid + label {
+    transform: translateY(-45px) !important;
+  } */

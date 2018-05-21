@@ -5,6 +5,9 @@ import { LandingPageComponent } from './_pages/general-pages/landing-page/landin
 import { LoginComponent } from './_pages/general-pages/login/login.component';
 import { SignupComponent } from './_pages/general-pages/signup/signup.component';
 import { GeneralDashboardComponent } from './_pages/general-dashboard/general-dashboard.component';
+import { DashboardBodyComponent} from './_pages/general-dashboard/dashboard-body/dashboard-body.component';
+// import {AuthenticationComponent} from './_pages/general-pages/Authentication/authentication.component';
+import {AuthenticationComponent} from './_pages/general-pages/Authentication/authentication.component'
 export const appRoutes: Routes = [
 
     {
@@ -14,14 +17,17 @@ export const appRoutes: Routes = [
     },
 
     { path: 'landing', component: LandingPageComponent },
+    // { path: 'login', component: LoginComponent },AuthenticationComponent
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'Authentication', component: AuthenticationComponent },
 
     {
         path: 'dashboard',
         component:GeneralDashboardComponent,
         children:[
-            {path:'',component:SignupComponent}
+            {path:'',component:SignupComponent},
+            // {path:'dashboard/DashboardBody',component:DashboardBodyComponent}
         ]
     }
     // {path:'**',component:''}
