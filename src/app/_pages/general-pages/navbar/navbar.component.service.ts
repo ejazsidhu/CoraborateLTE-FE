@@ -28,7 +28,7 @@ export class navbarcomponentservice {
          let url2 = "https://www.cricdreamteam.com/api/E2EWebAPI/GetAllClassess?userId=1";
         let url = this._config.urlBuilderE2E(action);
         console.log(url);
-        debugger;
+        // debugger;
         let obj= null;
         // console.log(obj)
         let Bodyobject = JSON.stringify(obj);

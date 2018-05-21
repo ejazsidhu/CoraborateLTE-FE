@@ -27,7 +27,7 @@ export class logincomponentservice {
         // let url = "https://www.cricdreamteam.com/api/AccountWebAPI/LogIn";
         let url = this._config.urlBuilderAccounts(action);
         console.log(url);
-        debugger;
+        // debugger;
         let obj = { "userName": userName, "Password": password }
         console.log(obj)
         let Bodyobject = JSON.stringify(obj);
