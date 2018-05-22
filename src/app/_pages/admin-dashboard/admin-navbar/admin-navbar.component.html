@@ -1,3 +1,303 @@
-<p>
-  admin-navbar works!
-</p>
+<header class="main-header">
+  <!-- Logo -->
+  <a class="logo">
+      <span class="logo-mini" style="padding-top: 16px;">
+          <img [src]="logo_mini" height="50px" width="50px" alt="no image available">
+      </span>
+
+      <span class="logo-lg" style="padding-top: 16px;">
+          <img [src]="logo_lg" class="img-fulid" alt="no image available">
+      </span>
+
+  </a>
+  <nav class="navbar navbar-static-top">
+
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
+         <!--    <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             
+         </a> -->
+         <div class="navbar-custom-menu">
+             <ul class="nav navbar-nav">
+                 <li style="width:57px;">
+                     <a>
+                         <img src="assets/Images/user2-160x160.jpg" class="user-image" alt="User Image" style="width: 50px; margin-left: -17px; border-radius: 50%; margin-top: 3px;">
+                     </a>
+                 </li>
+                 <li class="dropdown user user-menu">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #ffffff !important; color: black;padding: 20px 0px 22px !important;margin-right: 30px;">
+                         <span class="">
+                             <span id="lblGreetings" style="margin-bottom: 0px!important; font-size: 16px; color: #8e8e8e;">Good Morning!</span>
+                             <br /><b style="font-size: 16px">Muhammad ibrahim </b>
+                             <i class="fa fa-fw fa-caret-down" style="font-size: 21px;"></i>
+                         </span>
+                     </a>
+                     <ul class="dropdown-menu unrLine">
+ 
+                         <li style=" height: 65px; box-shadow: 0px 3px 3px 0px #c7c6c6; cursor: pointer;">
+                             <a class="profileExpand">
+                                 <i><img src="assets/Images/profile.png" ></i>
+                              </a>
+                              <div id="line"></div>
+                              <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Profile</b>
+                             
+                         </li>
+
+                         <li style=" height: 65px; cursor: pointer;">
+                          <a class="profileExpand">
+                              <i><img src="assets/Images/profile.png" ></i>
+                           </a>
+                           <div id="line"></div>
+                           <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Password</b>
+                          
+                      </li>
+<!-- 
+                         <li>
+                             <a>
+                                 <i class="fa fa-fw fa-gears"></i>Password
+                             </a>
+                         </li> -->
+                         <!-- <li>
+                             <a>
+                                 <i class="fa fa-fw fa-gears"></i>Forget Password
+                             </a>
+                         </li> -->
+                         <li style=" height: 65px; cursor: pointer;">
+                          <a class="profileExpand">
+                              <i><img src="assets/Images/profile.png" ></i>
+                           </a>
+                           <div id="line"></div>
+                           <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Help</b>
+                          
+                      </li>
+                      <li style="     border-bottom: 0px; height: 65px; cursor: pointer;">
+                          <a class="profileExpand">
+                              <i><img src="assets/Images/profile.png" ></i>
+                           </a>
+                           <div id="line"></div>
+                           <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Log Out</b>
+                          
+                      </li>
+                     </ul>
+
+                 </li>
+             </ul>
+         </div>
+ 
+ 
+     </nav>
+  <!-- Header Navbar: style can be found in header.less -->
+  <!-- <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+         
+      </a>
+
+      <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+                  <li>
+                          <a>
+                              <img src="assets/Images/user2-160x160.jpg" alt="User Image" >
+                          </a>
+                      </li>
+          </ul>
+      </div>
+
+  </nav> -->
+  <!-- <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button--
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+    
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+           
+             
+              <!-- Tasks: style can be found in dropdown.less -->
+             
+              <!-- User Account: style can be found in dropdown.less --
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="assets/Images/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Alexander ibrahim khattana Pierce</span>
+                </a>
+                
+                
+                
+                
+                
+                <ul class="dropdown-menu">
+                  <!-- User image --
+                  
+                  
+                  
+                  
+                     <li style="box-shadow: 0px 3px 3px 0px #c7c6c6;">
+                                <a class="profileExpand">
+                                    <i class="fa fa-fw fa-user"></i>Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-fw fa-gears"></i>Password
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-fw fa-gears"></i>Forget Password
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-fw fa-info-circle"></i>Help Center
+                                </a>
+                            </li>
+                            <li style="border-bottom: 0px solid !important;">
+                                <a>
+                                    <i class="fa fa-fw fa-power-off"></i>Log out
+                                </a>
+                            </li>
+                        
+                 </ul>
+            </ul>
+          </div>
+        </nav> -->
+</header>
+
+
+
+<aside class="main-sidebar">
+  <!-- style="overflow-x: scroll; height: 80%; margin-top: 176px;" -->
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar" style="height: 80%; margin-top:150px !important; ">
+      <ul class="sidebar-menu" data-widget="tree">
+          <!-- style="margin-left: 20px;" -->
+          <!-- <li class="heading">
+              <a>
+                  <span style="margin-right: 44px">CREATED CLASSES</span>
+                  <i>
+                      <img src="../assets/Images/add-plus-button.png">
+                  </i>
+              </a>
+          </li> -->
+          <li class="heading">
+            <a style="padding-left: 5px;">
+                <i><img height="25px" width="25px"  src="../assets/Images/chat.png" alt=""></i>
+                <span class="colorblk">Messages</span>
+                
+            </a>
+        </li>
+        <li class="heading">
+          <a style="padding-left: 5px;">
+              <i><img height="25px" width="25px"  src="../assets/Images/bar-chart.png" alt=""></i>
+             <span class="colorblk" style="margin-right: 43px; font-family: 'Montserrat', sans-serif;">Statistics</span>
+              
+          </a>
+      </li>
+      <hr style="width:100%">
+      <li class="heading" >
+          <a style="padding-left: 5px;">
+              <i>
+                  <img height="15px" width="15px" src="../assets/Images/search.png">
+              </i>
+              <span style="margin-right: 38px;"><input style="    width: 200px;"></span>
+             
+          </a>
+      </li>
+      <br>
+          <li class="heading" >
+              <a style="padding-left: 30px;">
+                  <i style="padding:0;float:right;padding-right: 30px;">
+                      <img src="../assets/Images/add-plus-button.png">
+                  </i>
+                  <span style="margin-right: 38px;">CREATED CLASSES</span>
+                 
+              </a>
+          </li>
+          <li class="heading">
+              <a style="padding-left: 3px;" href="#">
+                  <i>
+                      <img height="34px" width="36px"  src="../assets/Images/school.png" alt="">
+                  </i>
+                  <span class="subHeading colorblck" >City School Johar Town</span>
+              </a>
+          </li>
+
+          <li class="heading">
+              <a style="padding-left: 3px;" href="#">
+                  <i>
+                    <img height="18px" width="24px"  src="../assets/Images/close-envelope.png" alt="">  
+                  </i>
+                  <span class="subHeading colorblck">Messages</span>
+              </a>
+          </li>
+
+          <li class="heading">
+              <a style="padding-left: 3px;" href="#">
+                  <i>
+                    <img height="20px" width="24px"  src="../assets/Images/graph.png" alt="">  
+                  </i>
+                  <span class="subHeading colorblck">Statistics</span>
+              </a>
+          </li>
+          
+          <li class="heading">
+              <a style="padding-left: 3px;" href="#">
+                  <i>
+                    <img height="25px" width="25px"  src="../assets/Images/pencil.png" alt="">  
+                  </i>
+                  <span class="subHeading colorblck">Student Code</span>
+              </a>
+          </li>
+          <li class="heading">
+              <a style="padding-left: 3px;" href="#">
+                  <i>
+                    <img height="23px" width="23px"  src="../assets/Images/appleblack.png" alt=""> 
+                  </i>
+                  <span class="subHeading colorblck">Teacher Code</span>
+              </a>
+          </li>
+          <li class="heading" style="line-height: 2px;">
+            <a style="padding-left: 3px;" href="#">
+                <i>
+                  <img height="23px" width="19px"  src="../assets/Images/admin.png" alt="">
+                </i>
+                <span class="subHeading colorblck">Admin Code</span>
+            </a>
+        </li>
+      </ul>
+      <hr style="width:100%">
+      <ul class="sidebar-menu" data-widget="tree">
+
+          <li class="heading">
+              <a style="padding-left: 28px;">
+                  <span style="margin-right: 60px;" class="colorblck">School Code </span>
+                  <i>
+                      <img src="../assets/Images/add-plus-button.png"> </i>
+              </a>
+          </li>
+          <li class="heading">
+            <a style="padding-left: 28px;">
+                <span style="margin-right: 52px;" class="colorblck">Teacher Code</span>
+                <i>
+                    <img src="../assets/Images/add-plus-button.png"> </i>
+            </a>
+        </li>
+        <li class="heading">
+          <a style="padding-left: 28px;">
+              <span style="margin-right: 62px;" class="colorblck">Admin Code</span>
+              <i>
+                  <img src="../assets/Images/add-plus-button.png"> </i>
+          </a>
+      </li>
+       
+      </ul>
+
+
+  </section>
+  <!-- /.sidebar -->
+</aside>
