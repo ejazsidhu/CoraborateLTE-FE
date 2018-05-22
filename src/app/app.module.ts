@@ -49,7 +49,8 @@ import {signupcomponentservice} from './_pages/general-pages/signup/signup.compo
 import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
-import { UserService } from './_services/user/user.service'
+import { UserService } from './_services/user/user.service';
+import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/master-navbar.component'
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { UserService } from './_services/user/user.service'
     SignupComponent,
     AdminDashboardBodyComponent,
     AdminNavbarComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    MasterNavbarComponent
   ],
   imports: [
     BrowserModule,
