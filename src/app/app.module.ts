@@ -34,14 +34,17 @@ import { SignupComponent } from './_pages/general-pages/signup/signup.component'
 
 
 import {logincomponentservice} from './_pages/general-pages/login/login.component.service';
-import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
-import {ConfigService} from './_services/config/config.service';
+
+
 import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
 import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admin-navbar.component';
 import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component'
-import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service'
 
+import {ConfigService} from './_services/config/config.service';
+import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service';
+import {signupcomponentservice} from './_pages/general-pages/signup/signup.component.service';
+import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
 @NgModule({
   declarations: [
@@ -91,7 +94,8 @@ import { authenticationcomponentservice } from './_pages/general-pages/Authentic
     ConfigService,
     logincomponentservice,
     navbarcomponentservice,
-    authenticationcomponentservice
+    authenticationcomponentservice,
+    signupcomponentservice
   ],
   bootstrap: [AppComponent]
 })

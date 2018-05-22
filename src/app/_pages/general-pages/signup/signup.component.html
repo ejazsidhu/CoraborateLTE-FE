@@ -52,7 +52,8 @@
   <br>
   <br>
 
-  <form [formGroup]=signupForm>
+  <form [formGroup]=signupForm (ngSubmit)=onSubmit(signupForm.value) class="text-left">
+      <!-- form [formGroup]=loginForm (ngSubmit)=onSubmit(loginForm.value) class="text-left" -->
 
     <div class="form-group-material">
       <input formControlName=firstName id="firstName" type="text" name="firstName" class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched && signupForm.controls['firstName'].value.length < 4 ),'is-valid': (signupForm.controls['firstName'].valid && signupForm.controls['firstName'].touched && signupForm.controls['firstName'].value.length >= 4 )}">
@@ -107,7 +108,7 @@
 
 
 
-    <div class="form-group-material">
+   <div class="form-group-material">
 
       <input formControlName=dOB id="signupdate" type="text" name="dOB"   class="input-material " [ngClass]="{'is-invalid ': (!signupForm.controls['dOB'].valid && signupForm.controls['dOB'].touched ),'is-valid': (signupForm.controls['dOB'].valid && signupForm.controls['dOB'].touched )}">
       <label for="dOB" class="label-material">Date of Birth</label>
@@ -135,7 +136,7 @@
     </div>
     <div class="form-group-material">
 
-      <select class="form-control" style="font-family: 'Montserrat', sans-serif; size:3.3pt; border-radius: .25rem; border-top:0px;border-left:0px;border-right:0px;">
+      <select formControlName=gender name="gender" class="form-control" style="font-family: 'Montserrat', sans-serif; size:3.3pt; border-radius: .25rem; border-top:0px;border-left:0px;border-right:0px;">
         <option>Gender</option>
         <option>Male</option>
         <option>Female</option>
@@ -143,6 +144,12 @@
       </select>
 
     </div>
+    <div style="text-align:center;">
+        <!-- <button routerLink="/dashboard" type="button" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button> -->
+        <!-- <button type="submit" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button> -->
+        <!-- [disabled]="!signupForm.valid"  -->
+        <button [disabled]="!signupForm.valid" type="submit" id="signupForm" class="btn btn-primary" style=" border:none;background-color: #f76149 ;width: 130px;border-radius: 4px;">SIGN UP</button>
+        </div>
   </form>
 
 
@@ -152,8 +159,10 @@
   <br>
   <br>
   <div style="text-align:center;">
-    <button routerLink="/dashboard" type="button" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button>
-
+    <!-- <button routerLink="/dashboard" type="button" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button> -->
+    <!-- <button type="submit" class="btn btn-flat btn-lg pagact" style="font-family: 'Montserrat', sans-serif; font-style:bold; font-size:15px; border-radius: .25rem;">SIGN UP</button> -->
+    <!-- [disabled]="!signupForm.valid"  -->
+    <!-- <button  type="submit" id="signupForm" class="btn btn-primary" style=" border:none;background-color: #f76149 ;width: 130px;border-radius: 4px;">SIGN UP</button> -->
     <p>If you have already an account ?</p>
     <a routerLink="/login">SIGN IN</a>
   </div>
