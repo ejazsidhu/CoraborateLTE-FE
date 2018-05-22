@@ -31,12 +31,12 @@ export class NavbarComponent implements OnInit {
     // this.school.ShoolName = this.CurrentUserObj.ShoolName;
     //console.log(CurrentUserObj);
     console.log(this.CurrentUserObj.ShoolName);
-    debugger;
+    // debugger;
     this.GetAllClasses(this.CurrentUserObj);
     // this.Logout();
   }
   Logout(){
-  debugger;
+  // debugger;
     sessionStorage.removeItem('CurrentUser');
     console.log( sessionStorage.getItem('CurrentUser'));
     this.router.navigate(['/landing']);
@@ -47,7 +47,7 @@ export class NavbarComponent implements OnInit {
     this.ns.GetAllClassesService(user.UserId).subscribe(data => {
       //console.log(data.ResponseData);
       this.ClassesView = data.ResponseData;
-      debugger;
+      // debugger;
       console.log(this.ClassesView);
     },
       Error => {
