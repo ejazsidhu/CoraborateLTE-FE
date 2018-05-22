@@ -94,3 +94,31 @@
   .sidebar-mini.sidebar-collapse .input-group>span>input{
     display: none !important;
  }
+ .croosx, .mailbox-attachment-croosx {
+  float: right;
+  line-height: 1;
+  background-color: rgb(247, 96, 73);
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.croosx:hover, .mailbox-attachment-croosx:hover, .croosx:focus, .mailbox-attachment-croosx:focus {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+.modal-header .croosx, .modal-header .mailbox-attachment-close {
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+  border:0px;
+  margin-top:-15px;
+  margin-right:-15px;
+  padding-left:15px;
+  padding-top:6px;
+}
+.croosx:not(:disabled):not(.disabled), .mailbox-attachment-croosx:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.pagact {
+	background-color:rgb(247, 96, 73);
+  color: #fff;
+}
