@@ -1,0 +1,124 @@
+#left-ul{
+    width: 279px;
+    margin-left: 16px;
+  }
+  .colorblk {
+      color: #000000;
+      margin-right: 43px; 
+      font-family: 'Montserrat', sans-serif;
+  }
+  .colorblck {
+    color: #000000;
+}
+  .colorgrey {
+    color: rgb(165, 165, 165);
+  }
+  #line{
+    width: 1px;
+      background-color: #c7c6c6;
+      position: relative;
+      top: -52px;
+      right: -57px;
+      height: 38px;
+      /* cursor: pointer; */
+  
+  }
+  .heading :hover {
+    background-color:#FFFFFF;
+   } 
+   .heading>a>i :hover {
+    /* background-color:#E5E5E5; */
+    cursor:pointer;
+  
+   }
+  
+  .heading {
+    /* width: 202px;
+    height: 16px; */
+    /* mix-blend-mode: undefined; */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f76149;
+    margin-bottom:10px; 
+  }
+  
+  .heading > a > span{
+      margin-right:100px;
+      
+  }
+  .heading>a>i{
+      color:#a2a2a2;
+      text-decoration: none;
+      padding: 20px;
+  }
+  .heading>a{
+    color: #f76149;
+    /* float: right; */
+  }
+  .classHeading{
+    width: 34px;
+    /* height: 34px; */
+    border-radius: 50%;
+    margin-left: 12px;
+    /* margin-top: -7px; */
+  }
+  
+  .subHeading{
+    /* width: 134px;
+    height: 18px; */
+    /* mix-blend-mode: undefined; */
+    /* font-family: Montserrat; */
+    font-size: 15px;
+    font-weight: 500;
+    /* font-style: normal; */
+    /* font-stretch: normal; */
+    /* line-height: 1.44; */
+    /* letter-spacing: normal; */
+    /* text-align: left; */
+    /* color: #000000; */
+    padding: 15px;
+  }
+  
+  .subMenu{
+    top: -2px;
+    padding: 0px;
+    /* display: block; */
+    left: -160px;
+  }
+  .sidebar-mini.sidebar-collapse .input-group>span>input{
+    display: none !important;
+ }
+ .croosx, .mailbox-attachment-croosx {
+  float: right;
+  line-height: 1;
+  background-color: rgb(247, 96, 73);
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.croosx:hover, .mailbox-attachment-croosx:hover, .croosx:focus, .mailbox-attachment-croosx:focus {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+.modal-header .croosx, .modal-header .mailbox-attachment-close {
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+  border:0px;
+  margin-top:-15px;
+  margin-right:-15px;
+  padding-left:15px;
+  padding-top:6px;
+}
+.croosx:not(:disabled):not(.disabled), .mailbox-attachment-croosx:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.pagact {
+	background-color:rgb(247, 96, 73);
+  color: #fff;
+}
