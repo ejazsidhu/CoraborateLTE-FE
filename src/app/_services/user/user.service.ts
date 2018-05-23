@@ -21,6 +21,7 @@ export class UserService {
     }
   }
 
+
   hasIdentityCode():boolean{
     if(sessionStorage.getItem('SignupCode')||sessionStorage.getItem('SignupData'))
     return true;
@@ -31,4 +32,5 @@ export class UserService {
     }
 
   }
+
 }

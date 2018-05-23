@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-admin-navbar',
-  templateUrl: './admin-navbar.component.html',
-  styleUrls: ['./admin-navbar.component.css']
+  selector: 'app-master-navbar',
+  templateUrl: './master-navbar.component.html',
+  styleUrls: ['./master-navbar.component.css']
 })
-export class AdminNavbarComponent implements OnInit {
-
+export class MasterNavbarComponent implements OnInit {
+  
   public  logo_lg= require('../../../../assets/images/sk2logo.svg');
   public  codegen= require('../../../../assets/images/code-gen.png');
   public  school= require('../../../../assets/images/create-school.png');
