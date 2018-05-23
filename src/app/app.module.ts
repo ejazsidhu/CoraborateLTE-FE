@@ -40,7 +40,15 @@ import {logincomponentservice} from './_pages/general-pages/login/login.componen
 import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
 import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admin-navbar.component';
 
-import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component';
+
+import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component'
+import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service'
+
+
+import { AuthGuard } from './_routerGuards/auth/auth.guard';
+import { UserService } from './_services/user/user.service';
+import { LoggedInAuthGuard } from './_routerGuards/logged-in-auth/logged-in-auth.guard';
+import { AuthenticationAuthGuard } from './_routerGuards/authentication-auth/authentication-auth.guard';
 
 
 import {ConfigService} from './_services/config/config.service';
@@ -103,10 +111,18 @@ import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/m
     navbarcomponentservice,
 
     authenticationcomponentservice,
+
+
+    AuthGuard,
+    UserService,
+    LoggedInAuthGuard,
+    AuthenticationAuthGuard
+
     signupcomponentservice,
     authenticationcomponentservice,
     AuthGuard,
     UserService
+
 
   ],
   bootstrap: [AppComponent]
