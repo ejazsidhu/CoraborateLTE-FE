@@ -8,7 +8,7 @@ import { GeneralDashboardComponent } from './_pages/general-dashboard/general-da
 
 
 import { DashboardBodyComponent } from './_pages/general-dashboard/dashboard-body/dashboard-body.component';
-// import {AuthenticationComponent} from './_pages/general-pages/Authentication/authentication.component';
+
 import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component'
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
@@ -35,7 +35,7 @@ export const appRoutes: Routes = [
 
 
     },
-    // { path: 'login', component: LoginComponent },AuthenticationComponent
+ 
     {
         path: 'login',
         component: LoginComponent,
