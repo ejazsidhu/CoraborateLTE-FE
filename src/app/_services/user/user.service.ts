@@ -20,4 +20,15 @@ export class UserService {
       return false;
     }
   }
+
+  hasIdentityCode():boolean{
+    if(sessionStorage.getItem('SignupCode')||sessionStorage.getItem('SignupData'))
+    return true;
+
+    else{
+      // this.router.navigate['/Authentication']
+      return false;
+    }
+
+  }
 }

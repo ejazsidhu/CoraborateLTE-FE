@@ -45,6 +45,8 @@ import { authenticationcomponentservice } from './_pages/general-pages/Authentic
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { UserService } from './_services/user/user.service';
+import { LoggedInAuthGuard } from './_routerGuards/logged-in-auth/logged-in-auth.guard';
+import { AuthenticationAuthGuard } from './_routerGuards/authentication-auth/authentication-auth.guard';
 
 
 @NgModule({
@@ -96,9 +98,12 @@ import { UserService } from './_services/user/user.service';
     logincomponentservice,
     navbarcomponentservice,
 
-    authenticationcomponentservice
+    authenticationcomponentservice,
 
-    AuthGuard,UserService
+    AuthGuard,
+    UserService,
+    LoggedInAuthGuard,
+    AuthenticationAuthGuard
 
   ],
   bootstrap: [AppComponent]
