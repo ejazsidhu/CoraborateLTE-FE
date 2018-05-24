@@ -1,15 +1,15 @@
 <section class="content">
-  <div class="row">
-    <div class="box-header">
+    <div class="row">
+        <div class="box-header">
 
-    </div>
-    <div class="col-md-6">
-      <div class="box-primary">
-        <div id="userProfieCircle">
-          <a href="#" id="expandUserPhoto">
-            <img src="assets/Images/user8-128x128.jpg" id="userPhoto" />
-          </a>
-          <!-- @using (Html.BeginForm("UserProfile", "Settings", FormMethod.Post, new { role = "form", enctype = "multipart/form-data" }))
+        </div>
+        <div class="col-md-6">
+            <div class="box-primary">
+                <div id="userProfieCircle">
+                    <a href="#" id="expandUserPhoto">
+                        <img src="assets/Images/user8-128x128.jpg" id="userPhoto" />
+                    </a>
+                    <!-- @using (Html.BeginForm("UserProfile", "Settings", FormMethod.Post, new { role = "form", enctype = "multipart/form-data" }))
                     {
                         if (Convert.ToBoolean(ViewBag.IsPhoto))
                         {
@@ -35,299 +35,117 @@
                         }
                     } -->
 
-        </div>
-        <div id="editProInfo">
-          <b>User FullName</b>
-          <br />
-          <!-- @foreach (var r in Model.User.Role)
-                    { -->
-          Role Name
-          <!-- } -->
-          <br />
-          <br />
-          <br />
-          <!-- <b> @Html.ActionLink("Edit Profile", "Account", "Settings", new { @id = "editProLink" })</b> -->
-          <a href="" id="editProLink">Edit Profile</a>
-        </div>
-      </div>
+                </div>
+                <div *ngIf="OwnedjoinedClasses" id="editProInfo">
+                    <b>{{OwnedjoinedClasses.UserName}}</b>
+                    <br /> {{OwnedjoinedClasses.role}}
+                    <br />
+                    <br />
+                    <br />
+                    <!-- <b> @Html.ActionLink("Edit Profile", "Account", "Settings", new { @id = "editProLink" })</b> -->
+                    <a href="" id="editProLink">Edit Profile</a>
+                </div>
+            </div>
 
-    </div>
-    <div class="col-md-6">
-      <div class="box-info">
-        <div>
-          <!-- <b>@Html.ActionLink("Complete Profile", "Account", "Settings", new { @id = "completePro" })</b> -->
-          <b>
-            <a href="" id="completePro">Complete Profile</a>
-          </b>
-          <div style="margin-left:180px;">
-            <input class="knob  animated" value="0" rel="60" readonly data-fgColor="#fa654e" data-width="130" data-thickness=".25">
-          </div>
         </div>
-      </div>
-    </div>
-    <hr />
-    <div class="col-md-12">
-      <div class="proClassHeading">
-        <b>
-          Classes owned &nbsp; &nbsp;
-          <!-- <a href="@Url.Action("Create", "Home", null)" class="modal-link"> -->
-          <a>
-            +
-          </a>
-        </b>
-      </div>
-      <br />
-      <br />
-      <!-- @Html.Partial("~/Views/Shared/EditorTemplates/ProfileOwnClasses.cshtml", Model.ClassesOwned) -->
-      <table id="profileClasses">
-          <!-- @foreach (var item in Model)
-          { -->
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle"> 
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;"/></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                 Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                   <!-- @{ 
+        <div class="col-md-6">
+            <div class="box-info">
+                <div>
+                    <!-- <b>@Html.ActionLink("Complete Profile", "Account", "Settings", new { @id = "completePro" })</b> -->
+                    <b>
+                        <a href="" id="completePro">Complete Profile</a>
+                    </b>
+                    <div style="margin-left:180px;">
+                        <input class="knob  animated" value="0" rel="60" readonly data-fgColor="#fa654e" data-width="130" data-thickness=".25">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="col-md-12">
+            <div class="proClassHeading">
+                <b>
+                    Classes owned &nbsp; &nbsp;
+                    <!-- <a href="@Url.Action("Create", "Home", null)" class="modal-link"> -->
+                    <a>
+                        +
+                    </a>
+                </b>
+            </div>
+            <br />
+            <br />
+            <!-- @Html.Partial("~/Views/Shared/EditorTemplates/ProfileOwnClasses.cshtml", Model.ClassesOwned) -->
+            <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.Id})'> -->
+            <table *ngIf="OwnedjoinedClasses" id="profileClasses">
+                <tr *ngFor="let item of OwnedjoinedClasses.OwnClassess" class="profileClasview">
+                    <td style="padding:5px">
+                        <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.Id})'> -->
+                        <a [routerLink]="['/dashboard/dashboardbody', item.OwnClassId]">
+                            <div class="CDforProfile">
+                                <div id="ProfileClassCircle">
+                                    <span>
+                                        <img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" />
+                                    </span>
+                                </div>&nbsp;&nbsp;
+                                <span class="ProfileCNameLink">
+                                    {{item.OwnClassName}}
+                                    <br />
+                                    <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
+                                    <!-- @{ 
                                        int i = Coraborate.Utils.CountPerson(item.Id);
                                    }    -->
-                                   12 Person  
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
+                                    12 Person
+                                </span>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <hr />
+        <div class="col-md-12">
+            <div class="proClassHeading">
+                <b>
+                    Classes joined &nbsp; &nbsp;
+                    <!-- <a href="@Url.Action("Join", "Home", null)" class="modal-link"> -->
+                    <a>
+                        +
+                    </a>
+                </b>
+            </div>
+            <br />
+            <br />
+            <!-- @Html.Partial("~/Views/Shared/EditorTemplates/ProfileJoinClasses.cshtml", Model.ClassesJoin) -->
+            <table *ngIf="OwnedjoinedClasses" id="profileClasses">
 
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle"> 
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;"/></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                 Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                   <!-- @{ 
-                                       int i = Coraborate.Utils.CountPerson(item.Id);
-                                   }    -->
-                                   12 Person  
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
+                <tr *ngFor="let item of OwnedjoinedClasses.JoinClassess" class="profileClasview">
+                    <td style="padding:5px">
+                        <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
+                        <a [routerLink]="['/dashboard/dashboardbody', item.JoinClassId]">
+                            <div class="CDforProfile">
+                                <div id="ProfileClassCircle">
+                                    <span>
+                                        <img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" />
+                                    </span>
+                                </div>&nbsp;&nbsp;
+                                <span class="ProfileCNameLink">
+                                    {{item.JoinClassName}}
+                                    <br />
+                                    <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
+                                    <!-- @{
+                                          int i = Coraborate.Utils.CountPerson(item.Id);
+                                      } -->
+                                    15 Person
+                                </span>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
 
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle"> 
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;"/></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                 Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                   <!-- @{ 
-                                       int i = Coraborate.Utils.CountPerson(item.Id);
-                                   }    -->
-                                   12 Person  
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-          <!-- } -->
-      </table>
+            </table>
+            <br />
+        </div>
     </div>
-    <hr />
-    <div class="col-md-12">
-      <div class="proClassHeading">
-        <b>
-          Classes joined &nbsp; &nbsp;
-          <!-- <a href="@Url.Action("Join", "Home", null)" class="modal-link"> -->
-          <a>
-            +
-          </a>
-        </b>
-      </div>
-      <br />
-      <br />
-      <!-- @Html.Partial("~/Views/Shared/EditorTemplates/ProfileJoinClasses.cshtml", Model.ClassesJoin) -->
-      <table id="profileClasses">
-          <!-- @foreach (var item in Model)
-          { -->
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-              <tr class="profileClasview">
-                  <td style="padding:5px">
-                      <!-- <a href='@Url.Action("Messages", "Home", new { classId = item.OwnClass_Id})'> -->
-                        <a>
-                          <div class="CDforProfile">
-                              <div id="ProfileClassCircle">
-                                  <span><img src="assets/Images/apple.PNG" style="width: 52px;border-radius: 50%;" /></span>
-                              </div>&nbsp;&nbsp;
-                              <span class="ProfileCNameLink">
-                                  Join Class Name <br />
-                                  <i class="fa fa-fw fa-users" style="margin-left: 11px;"></i>
-                                  <!-- @{
-                                          int i = Coraborate.Utils.CountPerson(item.Id);
-                                      } -->
-                                 15 Person
-                              </span>
-                          </div>
-                      </a>
-                  </td>
-              </tr>
-           
-          <!-- } -->
-      </table>
-      <br />
-    </div>
-  </div>
 </section>
