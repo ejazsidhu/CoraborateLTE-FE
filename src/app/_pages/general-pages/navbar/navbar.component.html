@@ -50,7 +50,7 @@
 
                         </li>
 
-                        <li style=" height: 65px; cursor: pointer;">
+                        <li routerLink="/dashboard/ChangePassword" style=" height: 65px; cursor: pointer;">
                             <a class="profileExpand">
                                 <i>
                                     <img src="assets/Images/profile.png">
@@ -58,7 +58,7 @@
                             </a>
                             <div id="line"></div>
                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Password</b>
-
+                        
                         </li>
                         <!-- 
                            <li>
@@ -113,7 +113,7 @@
                             <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Block Users</b>
 
                         </li>
-                        <li style="    border-bottom: 0px; height: 65px;  cursor: pointer;">
+                        <li routerLink="/dashboard/OrganizeClasses" style="border-bottom: 0px; height: 65px;  cursor: pointer;">
                             <a class="profileExpand">
                                 <i>
                                     <img src="assets/Images/profile.png">
@@ -228,7 +228,7 @@
 <aside class="main-sidebar">
     <!-- style="overflow-x: scroll; height: 80%; margin-top: 176px;" -->
     <!-- sidebar: style can be found in sidebar.less -->
-    <section  class="sidebar" style="height: 80%; margin-top:150px !important; ">
+    <section class="sidebar" style="height: 80%; margin-top:150px !important; ">
         <ul *ngIf="ClassesView" class="sidebar-menu" data-widget="tree">
             <!-- style="margin-left: 20px;" -->
             <!-- <li class="heading">
@@ -248,11 +248,14 @@
                 </a>
             </li>
             <li *ngFor="let item of ClassesView.OwnClassess">
-                <a style="padding-left: 3px;" href="#">
+                <!-- <a routerLink="/dashboard/dashboardbody" style="padding-left: 3px;" href="#"> -->
+                <a [routerLink]="['/dashboard/dashboardbody', item.OwnClassId]" style="padding-left: 3px;" href="#">
+                    <!-- <a [routerLink]="['/dashboard/dashboardbody']" [queryParams]="{Code:item.OwnClassCode }" style="padding-left: 3px;" href="#">   -->
+
                     <i>
                         <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
                     </i>
-                    <span class="subHeading"> {{item.OwnClassName}} {{item.OwnClassCode}}</span>
+                    <span class="subHeading"> {{item.OwnClassName}} </span>
                 </a>
             </li>
         </ul>
@@ -267,7 +270,7 @@
                 </a>
             </li>
             <li *ngFor="let item of ClassesView.JoinClassess">
-                <a style="padding-left: 3px;" href="#">
+                <a [routerLink]="['/dashboard/dashboardbody', item.JoinClassId]" style="padding-left: 3px;" href="#">
                     <i>
                         <img class="classHeading" src="../assets/Images/ClassIcons/art.svg" alt="">
                     </i>
