@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   CurrentUserObj: User;
   UserFirstClassId: any;
   public logo_lg = require('../../../../assets/images/CoraborateSmallIcon.png');
-  public logo_mini = require('../../../../assets/images/CoraborateSmallIcon.png');
+  public logo_mini = require('../../../../assets/images/withoutTextLogo.png');
   public user_image = require("../../../../assets/images/user8-128x128.jpg");
   constructor(private ns: navbarcomponentservice,
     private router: Router) { }

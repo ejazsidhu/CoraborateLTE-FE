@@ -9,10 +9,15 @@ import { DashboardBodyComponent } from './_pages/general-dashboard/dashboard-bod
 import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component'
 import { LoggedInAuthGuard } from './_routerGuards/logged-in-auth/logged-in-auth.guard';
 import { AuthenticationAuthGuard } from './_routerGuards/authentication-auth/authentication-auth.guard';
+
 import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-classes/organize-classes.component'
 import { PasswordComponent } from './_pages/general-dashboard/password/password.component';
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
+
+
+
+
 
 export const appRoutes: Routes = [
 
@@ -46,14 +51,8 @@ export const appRoutes: Routes = [
     },
 
 
-    // {
-    //     path: 'dashboard',
-
-    //     component:GeneralDashboardComponent,
-    //     canActivate:[AuthGuard],
-    //     children:[
-    //         {path:'',component:SignupComponent},
-
+   
+    
 
     // { path: 'landing', component: LandingPageComponent },
 
@@ -72,6 +71,8 @@ export const appRoutes: Routes = [
             { path: 'dashboardbody/:Id', component: DashboardBodyComponent },
             {path: 'OrganizeClasses', component: OrganizeClassesComponent },
             {path: 'ChangePassword', component: PasswordComponent },
+            {path:'profile',component:ProfileComponent},
+            {path:'change-password',component:PasswordComponent}
             
         ]
     }

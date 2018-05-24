@@ -52,20 +52,20 @@ import { AuthenticationAuthGuard } from './_routerGuards/authentication-auth/aut
 
 import {ConfigService} from './_services/config/config.service';
 
-
 import {signupcomponentservice} from './_pages/general-pages/signup/signup.component.service';
 import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { UserService } from './_services/user/user.service';
 
-import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/master-navbar.component'
+import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/master-navbar.component';
 
 import { DashboardBodycomponentservice } from './_pages/general-dashboard/dashboard-body/dashboard-body.component.service';
 import { OrganizeClassesService } from './_pages/general-dashboard/organize-classes/organize-classes.service'
 import { passwordcomponentservice } from './_pages/general-dashboard/password/password.component.service';
 import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
 import { forgetpasswordcomponentservice } from './_pages/general-pages/forget-password/forget-password.component.service';
+import { ProfileComponent } from './_pages/general-pages/profile/profile.component';
 
 
 @NgModule({
@@ -103,7 +103,10 @@ import { forgetpasswordcomponentservice } from './_pages/general-pages/forget-pa
     AdminNavbarComponent,
     AuthenticationComponent,
     MasterNavbarComponent,
-    forgetPasswordComponent
+
+    forgetPasswordComponent,
+
+    ProfileComponent
 
   ],
   imports: [
@@ -124,6 +127,10 @@ import { forgetpasswordcomponentservice } from './_pages/general-pages/forget-pa
     UserService,
     LoggedInAuthGuard,
     AuthenticationAuthGuard,
+<<<<<<< HEAD
+=======
+
+>>>>>>> routeing is set and profile page added
     signupcomponentservice,
     authenticationcomponentservice,
     AuthGuard,
