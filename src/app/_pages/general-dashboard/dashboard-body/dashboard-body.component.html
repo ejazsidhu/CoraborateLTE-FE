@@ -1,5 +1,5 @@
 
-    <section class="content-header">
+    <section  class="content-header">
         <!-- <div style="width:300px;margin-left: 57px;"> -->
         <div style="width:300px;">
             <a id="editClass" class="modal-link">
@@ -13,8 +13,8 @@
                     <!-- <b> {{_MessageService.ClassHistory.Name}} name</b><br />
                                 {{_MessageService.ClassHistory.Code}} code -->
                     <div class="MainCNameLink">
-                        <b>name</b>
-                        <br /> code
+                        <b>{{ParticipantsList.classData.ClassName}}</b>
+                        <br /> {{ParticipantsList.classData.ClassCode}}
                     </div>
                 </div>
             </a>
@@ -119,11 +119,11 @@
                                 </li>
                             </ul> -->
                             <ul class="nav nav-pills nav-stacked">
-                                    <li>
+                                    <li  *ngFor="let item of ParticipantsList.result">
                                         <a>
                                             <div class="Fname">Fir </div>
                                             <p style="margin-top: -30px; margin-left: 37px; color:black;">
-                                                full Name
+                                                {{item.FullName}}
                                                 <span style="float:right;color:#828181;font-size: 12px;">10h</span>
                                                 <br />
                                                 <span style="color:#828181;font-size: 12px;">What are you doing.</span>
@@ -137,7 +137,7 @@
                     </div>
                     <div class="box-body" style="margin-left: 346px!important;margin-top:-80px;">
                         <p style="font-weight: bold;">
-                            {{_MessageService.ClassHistory.firbaseIdentity}}
+                            <!-- {{_MessageService.ClassHistory.firbaseIdentity}} -->
                             <br />
                             <span style="font-weight: normal;">infoText</span>
                         </p>

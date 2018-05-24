@@ -350,7 +350,7 @@ a:hover, a:active, a:focus {
 	font-size: 12px;
 	padding: 7px 5px;
 	position: absolute;
-	top: 53px;
+    top: 24px;
 	right: 10px;
 	border-radius: 2px;
 }

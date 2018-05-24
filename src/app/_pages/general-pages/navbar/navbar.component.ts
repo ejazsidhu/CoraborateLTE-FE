@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
   ClassesView: ClassesViews;
   school: School = null;
   CurrentUserObj: User;
+  UserFirstClassId: any;
   public logo_lg = require('../../../../assets/images/CoraborateSmallIcon.png');
   public logo_mini = require('../../../../assets/images/CoraborateSmallIcon.png');
   public user_image = require("../../../../assets/images/user8-128x128.jpg");
@@ -35,10 +36,10 @@ export class NavbarComponent implements OnInit {
     this.GetAllClasses(this.CurrentUserObj);
     // this.Logout();
   }
-  Logout(){
-  // debugger;
+  Logout() {
+    // debugger;
     sessionStorage.removeItem('CurrentUser');
-    console.log( sessionStorage.getItem('CurrentUser'));
+    console.log(sessionStorage.getItem('CurrentUser'));
     this.router.navigate(['/landing']);
   }
   GetAllClasses(user: User) {
@@ -47,7 +48,17 @@ export class NavbarComponent implements OnInit {
     this.ns.GetAllClassesService(user.UserId).subscribe(data => {
       //console.log(data.ResponseData);
       this.ClassesView = data.ResponseData;
-      // debugger;
+      debugger;
+      // if (this.ClassesView.OwnClassess != undefined) {
+      //   this.UserFirstClassId = this.ClassesView.OwnClassess[0].OwnClassId;
+      //   sessionStorage.setItem('UserFirstClassId', this.UserFirstClassId);
+      // }
+      // else// if(this.ClassesView.JoinClassess != undefined)
+      // {
+      // this.UserFirstClassId = this.ClassesView.OwnClassess[0].OwnClassId;
+      //   sessionStorage.setItem('UserFirstClassId', this.UserFirstClassId);
+      // }
+
       console.log(this.ClassesView);
     },
       Error => {

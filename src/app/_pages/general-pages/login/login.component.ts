@@ -63,6 +63,15 @@ export class LoginComponent implements OnInit {
           ;
           
         }
+        if(Error.status==500)
+        {this.errorTrigger=true;
+          let errormsg= JSON.parse(Error._body);
+
+          this.message= errormsg.Message;
+          // this.loginForm.reset();
+          ;
+          
+        }
         console.log(Error);
         //  console.log(data);
         console.log("fail");

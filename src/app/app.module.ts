@@ -58,7 +58,15 @@ import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.com
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { UserService } from './_services/user/user.service';
+
 import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/master-navbar.component'
+
+import { DashboardBodycomponentservice } from './_pages/general-dashboard/dashboard-body/dashboard-body.component.service';
+import { OrganizeClassesService } from './_pages/general-dashboard/organize-classes/organize-classes.service'
+import { passwordcomponentservice } from './_pages/general-dashboard/password/password.component.service';
+import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
+import { forgetpasswordcomponentservice } from './_pages/general-pages/forget-password/forget-password.component.service';
+
 
 @NgModule({
   declarations: [
@@ -94,7 +102,9 @@ import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/m
     AdminDashboardBodyComponent,
     AdminNavbarComponent,
     AuthenticationComponent,
-    MasterNavbarComponent
+    MasterNavbarComponent,
+    forgetPasswordComponent
+
   ],
   imports: [
     BrowserModule,
@@ -120,8 +130,11 @@ import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/m
     UserService,
     authenticationcomponentservice,
     AuthGuard,
-    UserService
-
+    UserService,
+    DashboardBodycomponentservice,
+    OrganizeClassesService,
+    passwordcomponentservice,
+    forgetpasswordcomponentservice
   ],
   bootstrap: [AppComponent]
 })
