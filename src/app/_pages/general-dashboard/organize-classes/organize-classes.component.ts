@@ -14,7 +14,7 @@ export class OrganizeClassesComponent implements OnInit {
 
   ngOnInit() {
 
-    sessionStorage.getItem('CurrentUser');
+    // sessionStorage.getItem('CurrentUser');
     this.CurrentUserObj = JSON.parse(sessionStorage.getItem('CurrentUser'));
     this.GetOwnedClasses(this.CurrentUserObj.UserId);
     debugger;

@@ -39,54 +39,56 @@
                     <!-- </div> -->
                     <ul class="dropdown-menu unrLine">
 
+
                         <li style=" height: 65px; box-shadow: 0px 3px 3px 0px #c7c6c6; cursor: pointer;" routerLink="profile">
-                            <a class="profileExpand">
-                                <i>
-                                    <img src="assets/Images/profile.png">
-                                </i>
-                            </a>
-                            <div id="line"></div>
-                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Profile</b>
+                            <li routerLink="/dashboard/Profile" style=" height: 65px; box-shadow: 0px 3px 3px 0px #c7c6c6; cursor: pointer;">
+                                <a class="profileExpand">
+                                    <i>
+                                        <img src="assets/Images/profile.png">
+                                    </i>
+                                </a>
+                                <div id="line"></div>
+                                <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Profile</b>
 
-                        </li>
+                            </li>
 
-                        <li style=" height: 65px; cursor: pointer;" routerLink="change-password">
+                            <li style=" height: 65px; cursor: pointer;" routerLink="change-password">
 
-                            <a class="profileExpand">
-                                <i>
-                                    <img src="assets/Images/profile.png">
-                                </i>
-                            </a>
-                            <div id="line"></div>
-                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Change Pass  </b>
+                                <a class="profileExpand">
+                                    <i>
+                                        <img src="assets/Images/profile.png">
+                                    </i>
+                                </a>
+                                <div id="line"></div>
+                                <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Change Pass </b>
 
 
-                        </li>
-                      
-                           
-                        <li style=" height: 65px; cursor: pointer;">
-                            <a class="profileExpand">
-                                <i>
-                                    <img src="assets/Images/profile.png">
-                                </i>
-                            </a>
-                            <div id="line"></div>
-                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Help</b>
+                            </li>
 
-                        </li>
-                        <li (click)="Logout()" style="border-bottom: 0px; height: 65px; cursor: pointer;">
-                            <a class="profileExpand">
-                                <i>
-                                    <img src="assets/Images/profile.png">
-                                </i>
-                            </a>
-                            <div id="line"></div>
-                            <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Log Out</b>
-                        </li>
+
+                            <li style=" height: 65px; cursor: pointer;">
+                                <a class="profileExpand">
+                                    <i>
+                                        <img src="assets/Images/profile.png">
+                                    </i>
+                                </a>
+                                <div id="line"></div>
+                                <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Help</b>
+
+                            </li>
+                            <li (click)="Logout()" style="border-bottom: 0px; height: 65px; cursor: pointer;">
+                                <a class="profileExpand">
+                                    <i>
+                                        <img src="assets/Images/profile.png">
+                                    </i>
+                                </a>
+                                <div id="line"></div>
+                                <b style="font-size: 16px; font-weight: 500; position: relative; top: -80px; right: -83px; color: #545454">Log Out</b>
+                            </li>
                     </ul>
                     <ul class="dropdown-menu unrLine" style="right:253px !important;">
 
-                        <li style=" height: 65px; cursor: pointer;">
+                        <li routerLink="/dashboard/DownloadRecord" style=" height: 65px; cursor: pointer;">
                             <a class="profileExpand">
                                 <i>
                                     <img src="assets/Images/profile.png">
@@ -130,7 +132,7 @@
                                <a>people</a>
                            </li> -->
                     </ul>
-                </li>
+                    </li>
             </ul>
         </div>
 

@@ -14,11 +14,16 @@ import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-cl
 import { PasswordComponent } from './_pages/general-dashboard/password/password.component';
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
+
 import { ProfileComponent } from './_pages/general-pages/profile/profile.component';
 
 
 
 
+
+
+import { RecordsComponent } from './_pages/general-dashboard/records/records.component';
+import { UserProfileComponent } from './_pages/general-dashboard/user-profile/user-profile.component';
 
 export const appRoutes: Routes = [
 
@@ -33,7 +38,7 @@ export const appRoutes: Routes = [
         component: LandingPageComponent,
         canActivate: [LoggedInAuthGuard]
     },
- 
+
     {
         path: 'login',
         component: LoginComponent,
@@ -42,18 +47,18 @@ export const appRoutes: Routes = [
     {
         path: 'signup',
         component: SignupComponent,
-        canActivate: [AuthenticationAuthGuard,LoggedInAuthGuard,]
+        canActivate: [AuthenticationAuthGuard, LoggedInAuthGuard,]
     },
     {
         path: 'Authentication', component: AuthenticationComponent
     },
     {
-        path: 'ForgetPassword', component: forgetPasswordComponent 
+        path: 'ForgetPassword', component: forgetPasswordComponent
     },
 
 
-   
-    
+
+
 
     // { path: 'landing', component: LandingPageComponent },
 
@@ -62,7 +67,7 @@ export const appRoutes: Routes = [
     // { path: 'Authentication', component: AuthenticationComponent },
     // {path: 'ForgetPassword', component: forgetPasswordComponent },
     // // {path: 'OrganizeClasses', component: AuthenticationComponent},
-        
+
     {
         path: 'dashboard',
         component: GeneralDashboardComponent,
@@ -70,11 +75,12 @@ export const appRoutes: Routes = [
         children: [
             { path: '', component: SignupComponent },
             { path: 'dashboardbody/:Id', component: DashboardBodyComponent },
-            {path: 'OrganizeClasses', component: OrganizeClassesComponent },
-            {path: 'ChangePassword', component: PasswordComponent },
-            {path:'profile',component:ProfileComponent},
-            {path:'change-password',component:PasswordComponent}
-            
+            { path: 'OrganizeClasses', component: OrganizeClassesComponent },
+            { path: 'ChangePassword', component: PasswordComponent },
+            { path: 'profile', component: ProfileComponent },
+            { path: 'change-password', component: PasswordComponent },
+            { path: 'DownloadRecord', component: RecordsComponent },
+            { path: 'Profile', component: UserProfileComponent },
         ]
     }
 ]

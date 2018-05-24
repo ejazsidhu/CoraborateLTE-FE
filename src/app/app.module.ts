@@ -65,7 +65,9 @@ import { OrganizeClassesService } from './_pages/general-dashboard/organize-clas
 import { passwordcomponentservice } from './_pages/general-dashboard/password/password.component.service';
 import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
 import { forgetpasswordcomponentservice } from './_pages/general-pages/forget-password/forget-password.component.service';
+
 import { ProfileComponent } from './_pages/general-pages/profile/profile.component';
+import { userprofilecomponentservice } from './_pages/general-dashboard/user-profile/user-profile.service';
 
 
 @NgModule({
@@ -137,7 +139,8 @@ import { ProfileComponent } from './_pages/general-pages/profile/profile.compone
     DashboardBodycomponentservice,
     OrganizeClassesService,
     passwordcomponentservice,
-    forgetpasswordcomponentservice
+    forgetpasswordcomponentservice,
+    userprofilecomponentservice
   ],
   bootstrap: [AppComponent]
 })
