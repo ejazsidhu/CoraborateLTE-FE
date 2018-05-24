@@ -39,15 +39,26 @@ import {logincomponentservice} from './_pages/general-pages/login/login.componen
 
 import { AdminDashboardBodyComponent } from './_pages/admin-dashboard/admin-dashboard-body/admin-dashboard-body.component';
 import { AdminNavbarComponent } from './_pages/admin-dashboard/admin-navbar/admin-navbar.component';
+
 import { AuthenticationComponent } from './_pages/general-pages/Authentication/authentication.component';
+import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service';
+
+
+
+import { LoggedInAuthGuard } from './_routerGuards/logged-in-auth/logged-in-auth.guard';
+import { AuthenticationAuthGuard } from './_routerGuards/authentication-auth/authentication-auth.guard';
+
+
+
 import {ConfigService} from './_services/config/config.service';
 
-import { authenticationcomponentservice } from './_pages/general-pages/Authentication/authentication.component.service';
+
 import {signupcomponentservice} from './_pages/general-pages/signup/signup.component.service';
 import { navbarcomponentservice } from './_pages/general-pages/navbar/navbar.component.service';
 
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
-import { UserService } from './_services/user/user.service'
+import { UserService } from './_services/user/user.service';
+import { MasterNavbarComponent } from './_pages/master-dashboard/master-navbar/master-navbar.component'
 
 @NgModule({
   declarations: [
@@ -82,7 +93,8 @@ import { UserService } from './_services/user/user.service'
     SignupComponent,
     AdminDashboardBodyComponent,
     AdminNavbarComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    MasterNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -98,6 +110,10 @@ import { UserService } from './_services/user/user.service'
     logincomponentservice,
     navbarcomponentservice,
     authenticationcomponentservice,
+    AuthGuard,
+    UserService,
+    LoggedInAuthGuard,
+    AuthenticationAuthGuard,
     signupcomponentservice,
     authenticationcomponentservice,
     AuthGuard,
@@ -105,6 +121,7 @@ import { UserService } from './_services/user/user.service'
     authenticationcomponentservice,
     AuthGuard,
     UserService
+
   ],
   bootstrap: [AppComponent]
 })
