@@ -127,10 +127,6 @@ import { ProfileComponent } from './_pages/general-pages/profile/profile.compone
     UserService,
     LoggedInAuthGuard,
     AuthenticationAuthGuard,
-<<<<<<< HEAD
-=======
-
->>>>>>> routeing is set and profile page added
     signupcomponentservice,
     authenticationcomponentservice,
     AuthGuard,

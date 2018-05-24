@@ -8,7 +8,7 @@
 
 html, body {
 	height: 100%;
-	background-color:#f4f4f4;
+	background-color: #f4f4f4;
 }
 
 /* custome added */
@@ -154,7 +154,11 @@ body {
 }
 
 .content {
-	/* min-height: 100% !important; */
+
+	/* custome changes by ejaz */
+	height: 800px;
+	max-height: 100% !important;
+	/* custome changes by ejaz */
 	padding: 19px;
 	margin-right: auto;
 	margin-left: auto;
@@ -350,7 +354,7 @@ a:hover, a:active, a:focus {
 	font-size: 12px;
 	padding: 7px 5px;
 	position: absolute;
-    top: 24px;
+	top: 24px;
 	right: 10px;
 	border-radius: 2px;
 }
@@ -635,15 +639,12 @@ a:hover, a:active, a:focus {
 		box-shadow: 5px 1px 8px -1px #c7c6c6;
 		height: 58px;
 	}
-
 	/* .sidebar-mini.sidebar-collapse .sidebar-menu>li:hover(.treeview)>a>span {
 		border-bottom-right-radius: 4px;
 		/* box-shadow: 0px 5px 8px 0px #c7c6c6; *
 		height: 50px;
 		background-color: red;
 	} */
-
-
 	.sidebar-mini.sidebar-collapse .sidebar-menu>li>.treeview-menu {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -1015,8 +1016,6 @@ a:hover, a:active, a:focus {
 	background-color: #eee;
 }
 
-
-
 .navbar-nav>.notifications-menu>.dropdown-menu, .navbar-nav>.messages-menu>.dropdown-menu, .navbar-nav>.tasks-menu>.dropdown-menu {
 	width: 280px;
 	padding: 0 0 0 0;
@@ -1346,8 +1345,8 @@ a:hover, a:active, a:focus {
 
 .navbar-custom-menu>.navbar-nav>li>.dropdown-menu {
 	position: absolute;
-    right: 30px;
-    left: auto;
+	right: 30px;
+	left: auto;
 	box-shadow: 0px 5px 8px 0px #c7c6c6;
 }
 

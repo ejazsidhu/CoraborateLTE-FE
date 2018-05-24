@@ -14,6 +14,7 @@ import { OrganizeClassesComponent } from './_pages/general-dashboard/organize-cl
 import { PasswordComponent } from './_pages/general-dashboard/password/password.component';
 import { AuthGuard } from './_routerGuards/auth/auth.guard';
 import { forgetPasswordComponent } from './_pages/general-pages/forget-password/forget-password.component';
+import { ProfileComponent } from './_pages/general-pages/profile/profile.component';
 
 
 
